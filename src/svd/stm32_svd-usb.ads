@@ -1,6 +1,6 @@
 pragma Style_Checks (Off);
 
---  This spec has been automatically generated from STM32F0x2.svd
+--  This spec has been automatically generated from STM32F0x0.svd
 
 pragma Restrictions (No_Elaboration_Code);
 
@@ -44,25 +44,22 @@ package STM32_SVD.USB is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-   with
-     Volatile_Full_Access,
-     Object_Size => 32,
-     Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
 
-   for EP0R_Register use
-     record
-       EA at 0 range 0 .. 3;
-       STAT_TX at 0 range 4 .. 5;
-       DTOG_TX at 0 range 6 .. 6;
-       CTR_TX at 0 range 7 .. 7;
-       EP_KIND at 0 range 8 .. 8;
-       EP_TYPE at 0 range 9 .. 10;
-       SETUP at 0 range 11 .. 11;
-       STAT_RX at 0 range 12 .. 13;
-       DTOG_RX at 0 range 14 .. 14;
-       CTR_RX at 0 range 15 .. 15;
-       Reserved_16_31 at 0 range 16 .. 31;
-     end record;
+   for EP0R_Register use record
+      EA             at 0 range 0 .. 3;
+      STAT_TX        at 0 range 4 .. 5;
+      DTOG_TX        at 0 range 6 .. 6;
+      CTR_TX         at 0 range 7 .. 7;
+      EP_KIND        at 0 range 8 .. 8;
+      EP_TYPE        at 0 range 9 .. 10;
+      SETUP          at 0 range 11 .. 11;
+      STAT_RX        at 0 range 12 .. 13;
+      DTOG_RX        at 0 range 14 .. 14;
+      CTR_RX         at 0 range 15 .. 15;
+      Reserved_16_31 at 0 range 16 .. 31;
+   end record;
 
    subtype EP1R_EA_Field is HAL.UInt4;
    subtype EP1R_STAT_TX_Field is HAL.UInt2;
@@ -94,25 +91,22 @@ package STM32_SVD.USB is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-   with
-     Volatile_Full_Access,
-     Object_Size => 32,
-     Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
 
-   for EP1R_Register use
-     record
-       EA at 0 range 0 .. 3;
-       STAT_TX at 0 range 4 .. 5;
-       DTOG_TX at 0 range 6 .. 6;
-       CTR_TX at 0 range 7 .. 7;
-       EP_KIND at 0 range 8 .. 8;
-       EP_TYPE at 0 range 9 .. 10;
-       SETUP at 0 range 11 .. 11;
-       STAT_RX at 0 range 12 .. 13;
-       DTOG_RX at 0 range 14 .. 14;
-       CTR_RX at 0 range 15 .. 15;
-       Reserved_16_31 at 0 range 16 .. 31;
-     end record;
+   for EP1R_Register use record
+      EA             at 0 range 0 .. 3;
+      STAT_TX        at 0 range 4 .. 5;
+      DTOG_TX        at 0 range 6 .. 6;
+      CTR_TX         at 0 range 7 .. 7;
+      EP_KIND        at 0 range 8 .. 8;
+      EP_TYPE        at 0 range 9 .. 10;
+      SETUP          at 0 range 11 .. 11;
+      STAT_RX        at 0 range 12 .. 13;
+      DTOG_RX        at 0 range 14 .. 14;
+      CTR_RX         at 0 range 15 .. 15;
+      Reserved_16_31 at 0 range 16 .. 31;
+   end record;
 
    subtype EP2R_EA_Field is HAL.UInt4;
    subtype EP2R_STAT_TX_Field is HAL.UInt2;
@@ -144,25 +138,22 @@ package STM32_SVD.USB is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-   with
-     Volatile_Full_Access,
-     Object_Size => 32,
-     Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
 
-   for EP2R_Register use
-     record
-       EA at 0 range 0 .. 3;
-       STAT_TX at 0 range 4 .. 5;
-       DTOG_TX at 0 range 6 .. 6;
-       CTR_TX at 0 range 7 .. 7;
-       EP_KIND at 0 range 8 .. 8;
-       EP_TYPE at 0 range 9 .. 10;
-       SETUP at 0 range 11 .. 11;
-       STAT_RX at 0 range 12 .. 13;
-       DTOG_RX at 0 range 14 .. 14;
-       CTR_RX at 0 range 15 .. 15;
-       Reserved_16_31 at 0 range 16 .. 31;
-     end record;
+   for EP2R_Register use record
+      EA             at 0 range 0 .. 3;
+      STAT_TX        at 0 range 4 .. 5;
+      DTOG_TX        at 0 range 6 .. 6;
+      CTR_TX         at 0 range 7 .. 7;
+      EP_KIND        at 0 range 8 .. 8;
+      EP_TYPE        at 0 range 9 .. 10;
+      SETUP          at 0 range 11 .. 11;
+      STAT_RX        at 0 range 12 .. 13;
+      DTOG_RX        at 0 range 14 .. 14;
+      CTR_RX         at 0 range 15 .. 15;
+      Reserved_16_31 at 0 range 16 .. 31;
+   end record;
 
    subtype EP3R_EA_Field is HAL.UInt4;
    subtype EP3R_STAT_TX_Field is HAL.UInt2;
@@ -194,25 +185,22 @@ package STM32_SVD.USB is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-   with
-     Volatile_Full_Access,
-     Object_Size => 32,
-     Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
 
-   for EP3R_Register use
-     record
-       EA at 0 range 0 .. 3;
-       STAT_TX at 0 range 4 .. 5;
-       DTOG_TX at 0 range 6 .. 6;
-       CTR_TX at 0 range 7 .. 7;
-       EP_KIND at 0 range 8 .. 8;
-       EP_TYPE at 0 range 9 .. 10;
-       SETUP at 0 range 11 .. 11;
-       STAT_RX at 0 range 12 .. 13;
-       DTOG_RX at 0 range 14 .. 14;
-       CTR_RX at 0 range 15 .. 15;
-       Reserved_16_31 at 0 range 16 .. 31;
-     end record;
+   for EP3R_Register use record
+      EA             at 0 range 0 .. 3;
+      STAT_TX        at 0 range 4 .. 5;
+      DTOG_TX        at 0 range 6 .. 6;
+      CTR_TX         at 0 range 7 .. 7;
+      EP_KIND        at 0 range 8 .. 8;
+      EP_TYPE        at 0 range 9 .. 10;
+      SETUP          at 0 range 11 .. 11;
+      STAT_RX        at 0 range 12 .. 13;
+      DTOG_RX        at 0 range 14 .. 14;
+      CTR_RX         at 0 range 15 .. 15;
+      Reserved_16_31 at 0 range 16 .. 31;
+   end record;
 
    subtype EP4R_EA_Field is HAL.UInt4;
    subtype EP4R_STAT_TX_Field is HAL.UInt2;
@@ -244,25 +232,22 @@ package STM32_SVD.USB is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-   with
-     Volatile_Full_Access,
-     Object_Size => 32,
-     Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
 
-   for EP4R_Register use
-     record
-       EA at 0 range 0 .. 3;
-       STAT_TX at 0 range 4 .. 5;
-       DTOG_TX at 0 range 6 .. 6;
-       CTR_TX at 0 range 7 .. 7;
-       EP_KIND at 0 range 8 .. 8;
-       EP_TYPE at 0 range 9 .. 10;
-       SETUP at 0 range 11 .. 11;
-       STAT_RX at 0 range 12 .. 13;
-       DTOG_RX at 0 range 14 .. 14;
-       CTR_RX at 0 range 15 .. 15;
-       Reserved_16_31 at 0 range 16 .. 31;
-     end record;
+   for EP4R_Register use record
+      EA             at 0 range 0 .. 3;
+      STAT_TX        at 0 range 4 .. 5;
+      DTOG_TX        at 0 range 6 .. 6;
+      CTR_TX         at 0 range 7 .. 7;
+      EP_KIND        at 0 range 8 .. 8;
+      EP_TYPE        at 0 range 9 .. 10;
+      SETUP          at 0 range 11 .. 11;
+      STAT_RX        at 0 range 12 .. 13;
+      DTOG_RX        at 0 range 14 .. 14;
+      CTR_RX         at 0 range 15 .. 15;
+      Reserved_16_31 at 0 range 16 .. 31;
+   end record;
 
    subtype EP5R_EA_Field is HAL.UInt4;
    subtype EP5R_STAT_TX_Field is HAL.UInt2;
@@ -294,25 +279,22 @@ package STM32_SVD.USB is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-   with
-     Volatile_Full_Access,
-     Object_Size => 32,
-     Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
 
-   for EP5R_Register use
-     record
-       EA at 0 range 0 .. 3;
-       STAT_TX at 0 range 4 .. 5;
-       DTOG_TX at 0 range 6 .. 6;
-       CTR_TX at 0 range 7 .. 7;
-       EP_KIND at 0 range 8 .. 8;
-       EP_TYPE at 0 range 9 .. 10;
-       SETUP at 0 range 11 .. 11;
-       STAT_RX at 0 range 12 .. 13;
-       DTOG_RX at 0 range 14 .. 14;
-       CTR_RX at 0 range 15 .. 15;
-       Reserved_16_31 at 0 range 16 .. 31;
-     end record;
+   for EP5R_Register use record
+      EA             at 0 range 0 .. 3;
+      STAT_TX        at 0 range 4 .. 5;
+      DTOG_TX        at 0 range 6 .. 6;
+      CTR_TX         at 0 range 7 .. 7;
+      EP_KIND        at 0 range 8 .. 8;
+      EP_TYPE        at 0 range 9 .. 10;
+      SETUP          at 0 range 11 .. 11;
+      STAT_RX        at 0 range 12 .. 13;
+      DTOG_RX        at 0 range 14 .. 14;
+      CTR_RX         at 0 range 15 .. 15;
+      Reserved_16_31 at 0 range 16 .. 31;
+   end record;
 
    subtype EP6R_EA_Field is HAL.UInt4;
    subtype EP6R_STAT_TX_Field is HAL.UInt2;
@@ -344,25 +326,22 @@ package STM32_SVD.USB is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-   with
-     Volatile_Full_Access,
-     Object_Size => 32,
-     Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
 
-   for EP6R_Register use
-     record
-       EA at 0 range 0 .. 3;
-       STAT_TX at 0 range 4 .. 5;
-       DTOG_TX at 0 range 6 .. 6;
-       CTR_TX at 0 range 7 .. 7;
-       EP_KIND at 0 range 8 .. 8;
-       EP_TYPE at 0 range 9 .. 10;
-       SETUP at 0 range 11 .. 11;
-       STAT_RX at 0 range 12 .. 13;
-       DTOG_RX at 0 range 14 .. 14;
-       CTR_RX at 0 range 15 .. 15;
-       Reserved_16_31 at 0 range 16 .. 31;
-     end record;
+   for EP6R_Register use record
+      EA             at 0 range 0 .. 3;
+      STAT_TX        at 0 range 4 .. 5;
+      DTOG_TX        at 0 range 6 .. 6;
+      CTR_TX         at 0 range 7 .. 7;
+      EP_KIND        at 0 range 8 .. 8;
+      EP_TYPE        at 0 range 9 .. 10;
+      SETUP          at 0 range 11 .. 11;
+      STAT_RX        at 0 range 12 .. 13;
+      DTOG_RX        at 0 range 14 .. 14;
+      CTR_RX         at 0 range 15 .. 15;
+      Reserved_16_31 at 0 range 16 .. 31;
+   end record;
 
    subtype EP7R_EA_Field is HAL.UInt4;
    subtype EP7R_STAT_TX_Field is HAL.UInt2;
@@ -394,25 +373,22 @@ package STM32_SVD.USB is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-   with
-     Volatile_Full_Access,
-     Object_Size => 32,
-     Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
 
-   for EP7R_Register use
-     record
-       EA at 0 range 0 .. 3;
-       STAT_TX at 0 range 4 .. 5;
-       DTOG_TX at 0 range 6 .. 6;
-       CTR_TX at 0 range 7 .. 7;
-       EP_KIND at 0 range 8 .. 8;
-       EP_TYPE at 0 range 9 .. 10;
-       SETUP at 0 range 11 .. 11;
-       STAT_RX at 0 range 12 .. 13;
-       DTOG_RX at 0 range 14 .. 14;
-       CTR_RX at 0 range 15 .. 15;
-       Reserved_16_31 at 0 range 16 .. 31;
-     end record;
+   for EP7R_Register use record
+      EA             at 0 range 0 .. 3;
+      STAT_TX        at 0 range 4 .. 5;
+      DTOG_TX        at 0 range 6 .. 6;
+      CTR_TX         at 0 range 7 .. 7;
+      EP_KIND        at 0 range 8 .. 8;
+      EP_TYPE        at 0 range 9 .. 10;
+      SETUP          at 0 range 11 .. 11;
+      STAT_RX        at 0 range 12 .. 13;
+      DTOG_RX        at 0 range 14 .. 14;
+      CTR_RX         at 0 range 15 .. 15;
+      Reserved_16_31 at 0 range 16 .. 31;
+   end record;
 
    --  control register
    type CNTR_Register is record
@@ -451,31 +427,28 @@ package STM32_SVD.USB is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-   with
-     Volatile_Full_Access,
-     Object_Size => 32,
-     Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
 
-   for CNTR_Register use
-     record
-       FRES at 0 range 0 .. 0;
-       PDWN at 0 range 1 .. 1;
-       LPMODE at 0 range 2 .. 2;
-       FSUSP at 0 range 3 .. 3;
-       RESUME at 0 range 4 .. 4;
-       L1RESUME at 0 range 5 .. 5;
-       Reserved_6_6 at 0 range 6 .. 6;
-       L1REQM at 0 range 7 .. 7;
-       ESOFM at 0 range 8 .. 8;
-       SOFM at 0 range 9 .. 9;
-       RESETM at 0 range 10 .. 10;
-       SUSPM at 0 range 11 .. 11;
-       WKUPM at 0 range 12 .. 12;
-       ERRM at 0 range 13 .. 13;
-       PMAOVRM at 0 range 14 .. 14;
-       CTRM at 0 range 15 .. 15;
-       Reserved_16_31 at 0 range 16 .. 31;
-     end record;
+   for CNTR_Register use record
+      FRES           at 0 range 0 .. 0;
+      PDWN           at 0 range 1 .. 1;
+      LPMODE         at 0 range 2 .. 2;
+      FSUSP          at 0 range 3 .. 3;
+      RESUME         at 0 range 4 .. 4;
+      L1RESUME       at 0 range 5 .. 5;
+      Reserved_6_6   at 0 range 6 .. 6;
+      L1REQM         at 0 range 7 .. 7;
+      ESOFM          at 0 range 8 .. 8;
+      SOFM           at 0 range 9 .. 9;
+      RESETM         at 0 range 10 .. 10;
+      SUSPM          at 0 range 11 .. 11;
+      WKUPM          at 0 range 12 .. 12;
+      ERRM           at 0 range 13 .. 13;
+      PMAOVRM        at 0 range 14 .. 14;
+      CTRM           at 0 range 15 .. 15;
+      Reserved_16_31 at 0 range 16 .. 31;
+   end record;
 
    subtype ISTR_EP_ID_Field is HAL.UInt4;
 
@@ -508,27 +481,24 @@ package STM32_SVD.USB is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-   with
-     Volatile_Full_Access,
-     Object_Size => 32,
-     Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
 
-   for ISTR_Register use
-     record
-       EP_ID at 0 range 0 .. 3;
-       DIR at 0 range 4 .. 4;
-       Reserved_5_6 at 0 range 5 .. 6;
-       L1REQ at 0 range 7 .. 7;
-       ESOF at 0 range 8 .. 8;
-       SOF at 0 range 9 .. 9;
-       RESET at 0 range 10 .. 10;
-       SUSP at 0 range 11 .. 11;
-       WKUP at 0 range 12 .. 12;
-       ERR at 0 range 13 .. 13;
-       PMAOVR at 0 range 14 .. 14;
-       CTR at 0 range 15 .. 15;
-       Reserved_16_31 at 0 range 16 .. 31;
-     end record;
+   for ISTR_Register use record
+      EP_ID          at 0 range 0 .. 3;
+      DIR            at 0 range 4 .. 4;
+      Reserved_5_6   at 0 range 5 .. 6;
+      L1REQ          at 0 range 7 .. 7;
+      ESOF           at 0 range 8 .. 8;
+      SOF            at 0 range 9 .. 9;
+      RESET          at 0 range 10 .. 10;
+      SUSP           at 0 range 11 .. 11;
+      WKUP           at 0 range 12 .. 12;
+      ERR            at 0 range 13 .. 13;
+      PMAOVR         at 0 range 14 .. 14;
+      CTR            at 0 range 15 .. 15;
+      Reserved_16_31 at 0 range 16 .. 31;
+   end record;
 
    subtype FNR_FN_Field is HAL.UInt11;
    subtype FNR_LSOF_Field is HAL.UInt2;
@@ -548,20 +518,17 @@ package STM32_SVD.USB is
       --  unspecified
       Reserved_16_31 : HAL.UInt16;
    end record
-   with
-     Volatile_Full_Access,
-     Object_Size => 32,
-     Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
 
-   for FNR_Register use
-     record
-       FN at 0 range 0 .. 10;
-       LSOF at 0 range 11 .. 12;
-       LCK at 0 range 13 .. 13;
-       RXDM at 0 range 14 .. 14;
-       RXDP at 0 range 15 .. 15;
-       Reserved_16_31 at 0 range 16 .. 31;
-     end record;
+   for FNR_Register use record
+      FN             at 0 range 0 .. 10;
+      LSOF           at 0 range 11 .. 12;
+      LCK            at 0 range 13 .. 13;
+      RXDM           at 0 range 14 .. 14;
+      RXDP           at 0 range 15 .. 15;
+      Reserved_16_31 at 0 range 16 .. 31;
+   end record;
 
    subtype DADDR_ADD_Field is HAL.UInt7;
 
@@ -574,17 +541,14 @@ package STM32_SVD.USB is
       --  unspecified
       Reserved_8_31 : HAL.UInt24 := 16#0#;
    end record
-   with
-     Volatile_Full_Access,
-     Object_Size => 32,
-     Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
 
-   for DADDR_Register use
-     record
-       ADD at 0 range 0 .. 6;
-       EF at 0 range 7 .. 7;
-       Reserved_8_31 at 0 range 8 .. 31;
-     end record;
+   for DADDR_Register use record
+      ADD           at 0 range 0 .. 6;
+      EF            at 0 range 7 .. 7;
+      Reserved_8_31 at 0 range 8 .. 31;
+   end record;
 
    subtype BTABLE_BTABLE_Field is HAL.UInt13;
 
@@ -597,17 +561,14 @@ package STM32_SVD.USB is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-   with
-     Volatile_Full_Access,
-     Object_Size => 32,
-     Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
 
-   for BTABLE_Register use
-     record
-       Reserved_0_2 at 0 range 0 .. 2;
-       BTABLE at 0 range 3 .. 15;
-       Reserved_16_31 at 0 range 16 .. 31;
-     end record;
+   for BTABLE_Register use record
+      Reserved_0_2   at 0 range 0 .. 2;
+      BTABLE         at 0 range 3 .. 15;
+      Reserved_16_31 at 0 range 16 .. 31;
+   end record;
 
    subtype LPMCSR_BESL_Field is HAL.UInt4;
 
@@ -626,20 +587,17 @@ package STM32_SVD.USB is
       --  unspecified
       Reserved_8_31 : HAL.UInt24 := 16#0#;
    end record
-   with
-     Volatile_Full_Access,
-     Object_Size => 32,
-     Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
 
-   for LPMCSR_Register use
-     record
-       LPMEN at 0 range 0 .. 0;
-       LPMACK at 0 range 1 .. 1;
-       Reserved_2_2 at 0 range 2 .. 2;
-       REMWAKE at 0 range 3 .. 3;
-       BESL at 0 range 4 .. 7;
-       Reserved_8_31 at 0 range 8 .. 31;
-     end record;
+   for LPMCSR_Register use record
+      LPMEN         at 0 range 0 .. 0;
+      LPMACK        at 0 range 1 .. 1;
+      Reserved_2_2  at 0 range 2 .. 2;
+      REMWAKE       at 0 range 3 .. 3;
+      BESL          at 0 range 4 .. 7;
+      Reserved_8_31 at 0 range 8 .. 31;
+   end record;
 
    --  Battery charging detector
    type BCDR_Register is record
@@ -666,25 +624,22 @@ package STM32_SVD.USB is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-   with
-     Volatile_Full_Access,
-     Object_Size => 32,
-     Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
 
-   for BCDR_Register use
-     record
-       BCDEN at 0 range 0 .. 0;
-       DCDEN at 0 range 1 .. 1;
-       PDEN at 0 range 2 .. 2;
-       SDEN at 0 range 3 .. 3;
-       DCDET at 0 range 4 .. 4;
-       PDET at 0 range 5 .. 5;
-       SDET at 0 range 6 .. 6;
-       PS2DET at 0 range 7 .. 7;
-       Reserved_8_14 at 0 range 8 .. 14;
-       DPPU at 0 range 15 .. 15;
-       Reserved_16_31 at 0 range 16 .. 31;
-     end record;
+   for BCDR_Register use record
+      BCDEN          at 0 range 0 .. 0;
+      DCDEN          at 0 range 1 .. 1;
+      PDEN           at 0 range 2 .. 2;
+      SDEN           at 0 range 3 .. 3;
+      DCDET          at 0 range 4 .. 4;
+      PDET           at 0 range 5 .. 5;
+      SDET           at 0 range 6 .. 6;
+      PS2DET         at 0 range 7 .. 7;
+      Reserved_8_14  at 0 range 8 .. 14;
+      DPPU           at 0 range 15 .. 15;
+      Reserved_16_31 at 0 range 16 .. 31;
+   end record;
 
    -----------------
    -- Peripherals --
@@ -723,29 +678,28 @@ package STM32_SVD.USB is
       --  Battery charging detector
       BCDR   : aliased BCDR_Register;
    end record
-   with Volatile;
+     with Volatile;
 
-   for USB_Peripheral use
-     record
-       EP0R at 16#0# range 0 .. 31;
-       EP1R at 16#4# range 0 .. 31;
-       EP2R at 16#8# range 0 .. 31;
-       EP3R at 16#C# range 0 .. 31;
-       EP4R at 16#10# range 0 .. 31;
-       EP5R at 16#14# range 0 .. 31;
-       EP6R at 16#18# range 0 .. 31;
-       EP7R at 16#1C# range 0 .. 31;
-       CNTR at 16#40# range 0 .. 31;
-       ISTR at 16#44# range 0 .. 31;
-       FNR at 16#48# range 0 .. 31;
-       DADDR at 16#4C# range 0 .. 31;
-       BTABLE at 16#50# range 0 .. 31;
-       LPMCSR at 16#54# range 0 .. 31;
-       BCDR at 16#58# range 0 .. 31;
-     end record;
+   for USB_Peripheral use record
+      EP0R   at 16#0# range 0 .. 31;
+      EP1R   at 16#4# range 0 .. 31;
+      EP2R   at 16#8# range 0 .. 31;
+      EP3R   at 16#C# range 0 .. 31;
+      EP4R   at 16#10# range 0 .. 31;
+      EP5R   at 16#14# range 0 .. 31;
+      EP6R   at 16#18# range 0 .. 31;
+      EP7R   at 16#1C# range 0 .. 31;
+      CNTR   at 16#40# range 0 .. 31;
+      ISTR   at 16#44# range 0 .. 31;
+      FNR    at 16#48# range 0 .. 31;
+      DADDR  at 16#4C# range 0 .. 31;
+      BTABLE at 16#50# range 0 .. 31;
+      LPMCSR at 16#54# range 0 .. 31;
+      BCDR   at 16#58# range 0 .. 31;
+   end record;
 
    --  Universal serial bus full-speed device interface
    USB_Periph : aliased USB_Peripheral
-   with Import, Address => USB_Base;
+     with Import, Address => USB_Base;
 
 end STM32_SVD.USB;

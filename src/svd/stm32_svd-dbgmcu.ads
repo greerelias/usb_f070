@@ -1,6 +1,6 @@
 pragma Style_Checks (Off);
 
---  This spec has been automatically generated from STM32F0x2.svd
+--  This spec has been automatically generated from STM32F0x0.svd
 
 pragma Restrictions (No_Elaboration_Code);
 
@@ -27,17 +27,14 @@ package STM32_SVD.DBGMCU is
       --  Read-only. Revision Identifier
       REV_ID : IDCODE_REV_ID_Field;
    end record
-   with
-     Volatile_Full_Access,
-     Object_Size => 32,
-     Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
 
-   for IDCODE_Register use
-     record
-       DEV_ID at 0 range 0 .. 11;
-       DIV_ID at 0 range 12 .. 15;
-       REV_ID at 0 range 16 .. 31;
-     end record;
+   for IDCODE_Register use record
+      DEV_ID at 0 range 0 .. 11;
+      DIV_ID at 0 range 12 .. 15;
+      REV_ID at 0 range 16 .. 31;
+   end record;
 
    --  Debug MCU Configuration Register
    type CR_Register is record
@@ -50,23 +47,20 @@ package STM32_SVD.DBGMCU is
       --  unspecified
       Reserved_3_31 : HAL.UInt29 := 16#0#;
    end record
-   with
-     Volatile_Full_Access,
-     Object_Size => 32,
-     Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
 
-   for CR_Register use
-     record
-       Reserved_0_0 at 0 range 0 .. 0;
-       DBG_STOP at 0 range 1 .. 1;
-       DBG_STANDBY at 0 range 2 .. 2;
-       Reserved_3_31 at 0 range 3 .. 31;
-     end record;
+   for CR_Register use record
+      Reserved_0_0  at 0 range 0 .. 0;
+      DBG_STOP      at 0 range 1 .. 1;
+      DBG_STANDBY   at 0 range 2 .. 2;
+      Reserved_3_31 at 0 range 3 .. 31;
+   end record;
 
    --  Debug MCU APB1 freeze register
    type APB1_FZ_Register is record
-      --  TIM2 counter stopped when core is halted
-      DBG_TIM2_STOP          : Boolean := False;
+      --  unspecified
+      Reserved_0_0           : HAL.Bit := 16#0#;
       --  TIM3 counter stopped when core is halted
       DBG_TIM3_STOP          : Boolean := False;
       --  unspecified
@@ -80,9 +74,7 @@ package STM32_SVD.DBGMCU is
       --  TIM14 counter stopped when core is halted
       DBG_TIM14_STOP         : Boolean := False;
       --  unspecified
-      Reserved_9_9           : HAL.Bit := 16#0#;
-      --  Debug RTC stopped when core is halted
-      DBG_RTC_STOP           : Boolean := False;
+      Reserved_9_10          : HAL.UInt2 := 16#0#;
       --  Debug window watchdog stopped when core is halted
       DBG_WWDG_STOP          : Boolean := False;
       --  Debug independent watchdog stopped when core is halted
@@ -92,36 +84,26 @@ package STM32_SVD.DBGMCU is
       --  SMBUS timeout mode stopped when core is halted
       DBG_I2C1_SMBUS_TIMEOUT : Boolean := False;
       --  unspecified
-      Reserved_22_24         : HAL.UInt3 := 16#0#;
-      --  CAN stopped when core is halted
-      DBG_CAN_STOP           : Boolean := False;
-      --  unspecified
-      Reserved_26_31         : HAL.UInt6 := 16#0#;
+      Reserved_22_31         : HAL.UInt10 := 16#0#;
    end record
-   with
-     Volatile_Full_Access,
-     Object_Size => 32,
-     Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
 
-   for APB1_FZ_Register use
-     record
-       DBG_TIM2_STOP at 0 range 0 .. 0;
-       DBG_TIM3_STOP at 0 range 1 .. 1;
-       Reserved_2_3 at 0 range 2 .. 3;
-       DBG_TIM6_STOP at 0 range 4 .. 4;
-       DBG_TIM7_STOP at 0 range 5 .. 5;
-       Reserved_6_7 at 0 range 6 .. 7;
-       DBG_TIM14_STOP at 0 range 8 .. 8;
-       Reserved_9_9 at 0 range 9 .. 9;
-       DBG_RTC_STOP at 0 range 10 .. 10;
-       DBG_WWDG_STOP at 0 range 11 .. 11;
-       DBG_IWDG_STOP at 0 range 12 .. 12;
-       Reserved_13_20 at 0 range 13 .. 20;
-       DBG_I2C1_SMBUS_TIMEOUT at 0 range 21 .. 21;
-       Reserved_22_24 at 0 range 22 .. 24;
-       DBG_CAN_STOP at 0 range 25 .. 25;
-       Reserved_26_31 at 0 range 26 .. 31;
-     end record;
+   for APB1_FZ_Register use record
+      Reserved_0_0           at 0 range 0 .. 0;
+      DBG_TIM3_STOP          at 0 range 1 .. 1;
+      Reserved_2_3           at 0 range 2 .. 3;
+      DBG_TIM6_STOP          at 0 range 4 .. 4;
+      DBG_TIM7_STOP          at 0 range 5 .. 5;
+      Reserved_6_7           at 0 range 6 .. 7;
+      DBG_TIM14_STOP         at 0 range 8 .. 8;
+      Reserved_9_10          at 0 range 9 .. 10;
+      DBG_WWDG_STOP          at 0 range 11 .. 11;
+      DBG_IWDG_STOP          at 0 range 12 .. 12;
+      Reserved_13_20         at 0 range 13 .. 20;
+      DBG_I2C1_SMBUS_TIMEOUT at 0 range 21 .. 21;
+      Reserved_22_31         at 0 range 22 .. 31;
+   end record;
 
    --  Debug MCU APB2 freeze register
    type APB2_FZ_Register is record
@@ -140,21 +122,18 @@ package STM32_SVD.DBGMCU is
       --  unspecified
       Reserved_19_31 : HAL.UInt13 := 16#0#;
    end record
-   with
-     Volatile_Full_Access,
-     Object_Size => 32,
-     Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
 
-   for APB2_FZ_Register use
-     record
-       Reserved_0_10 at 0 range 0 .. 10;
-       DBG_TIM1_STOP at 0 range 11 .. 11;
-       Reserved_12_15 at 0 range 12 .. 15;
-       DBG_TIM15_STOP at 0 range 16 .. 16;
-       DBG_TIM16_STOP at 0 range 17 .. 17;
-       DBG_TIM17_STOP at 0 range 18 .. 18;
-       Reserved_19_31 at 0 range 19 .. 31;
-     end record;
+   for APB2_FZ_Register use record
+      Reserved_0_10  at 0 range 0 .. 10;
+      DBG_TIM1_STOP  at 0 range 11 .. 11;
+      Reserved_12_15 at 0 range 12 .. 15;
+      DBG_TIM15_STOP at 0 range 16 .. 16;
+      DBG_TIM16_STOP at 0 range 17 .. 17;
+      DBG_TIM17_STOP at 0 range 18 .. 18;
+      Reserved_19_31 at 0 range 19 .. 31;
+   end record;
 
    -----------------
    -- Peripherals --
@@ -171,18 +150,17 @@ package STM32_SVD.DBGMCU is
       --  Debug MCU APB2 freeze register
       APB2_FZ : aliased APB2_FZ_Register;
    end record
-   with Volatile;
+     with Volatile;
 
-   for DBGMCU_Peripheral use
-     record
-       IDCODE at 16#0# range 0 .. 31;
-       CR at 16#4# range 0 .. 31;
-       APB1_FZ at 16#8# range 0 .. 31;
-       APB2_FZ at 16#C# range 0 .. 31;
-     end record;
+   for DBGMCU_Peripheral use record
+      IDCODE  at 16#0# range 0 .. 31;
+      CR      at 16#4# range 0 .. 31;
+      APB1_FZ at 16#8# range 0 .. 31;
+      APB2_FZ at 16#C# range 0 .. 31;
+   end record;
 
    --  Debug support
    DBGMCU_Periph : aliased DBGMCU_Peripheral
-   with Import, Address => DBGMCU_Base;
+     with Import, Address => DBGMCU_Base;
 
 end STM32_SVD.DBGMCU;

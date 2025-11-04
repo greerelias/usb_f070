@@ -1,6 +1,6 @@
 pragma Style_Checks (Off);
 
---  This spec has been automatically generated from STM32F0x2.svd
+--  This spec has been automatically generated from STM32F0x0.svd
 
 pragma Restrictions (No_Elaboration_Code);
 
@@ -23,16 +23,13 @@ package STM32_SVD.CRC is
       --  unspecified
       Reserved_8_31 : HAL.UInt24 := 16#0#;
    end record
-   with
-     Volatile_Full_Access,
-     Object_Size => 32,
-     Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
 
-   for IDR_Register use
-     record
-       IDR at 0 range 0 .. 7;
-       Reserved_8_31 at 0 range 8 .. 31;
-     end record;
+   for IDR_Register use record
+      IDR           at 0 range 0 .. 7;
+      Reserved_8_31 at 0 range 8 .. 31;
+   end record;
 
    subtype CR_POLYSIZE_Field is HAL.UInt2;
    subtype CR_REV_IN_Field is HAL.UInt2;
@@ -52,20 +49,17 @@ package STM32_SVD.CRC is
       --  unspecified
       Reserved_8_31 : HAL.UInt24 := 16#0#;
    end record
-   with
-     Volatile_Full_Access,
-     Object_Size => 32,
-     Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
 
-   for CR_Register use
-     record
-       RESET at 0 range 0 .. 0;
-       Reserved_1_2 at 0 range 1 .. 2;
-       POLYSIZE at 0 range 3 .. 4;
-       REV_IN at 0 range 5 .. 6;
-       REV_OUT at 0 range 7 .. 7;
-       Reserved_8_31 at 0 range 8 .. 31;
-     end record;
+   for CR_Register use record
+      RESET         at 0 range 0 .. 0;
+      Reserved_1_2  at 0 range 1 .. 2;
+      POLYSIZE      at 0 range 3 .. 4;
+      REV_IN        at 0 range 5 .. 6;
+      REV_OUT       at 0 range 7 .. 7;
+      Reserved_8_31 at 0 range 8 .. 31;
+   end record;
 
    -----------------
    -- Peripherals --
@@ -82,18 +76,17 @@ package STM32_SVD.CRC is
       --  Initial CRC value
       INIT : aliased HAL.UInt32;
    end record
-   with Volatile;
+     with Volatile;
 
-   for CRC_Peripheral use
-     record
-       DR at 16#0# range 0 .. 31;
-       IDR at 16#4# range 0 .. 31;
-       CR at 16#8# range 0 .. 31;
-       INIT at 16#C# range 0 .. 31;
-     end record;
+   for CRC_Peripheral use record
+      DR   at 16#0# range 0 .. 31;
+      IDR  at 16#4# range 0 .. 31;
+      CR   at 16#8# range 0 .. 31;
+      INIT at 16#C# range 0 .. 31;
+   end record;
 
    --  cyclic redundancy check calculation unit
    CRC_Periph : aliased CRC_Peripheral
-   with Import, Address => CRC_Base;
+     with Import, Address => CRC_Base;
 
 end STM32_SVD.CRC;

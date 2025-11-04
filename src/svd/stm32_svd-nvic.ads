@@ -1,6 +1,6 @@
 pragma Style_Checks (Off);
 
---  This spec has been automatically generated from STM32F0x2.svd
+--  This spec has been automatically generated from STM32F0x0.svd
 
 pragma Restrictions (No_Elaboration_Code);
 
@@ -38,22 +38,19 @@ package STM32_SVD.NVIC is
       --  PRI_03
       PRI_03         : IPR0_PRI_03_Field := 16#0#;
    end record
-   with
-     Volatile_Full_Access,
-     Object_Size => 32,
-     Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
 
-   for IPR0_Register use
-     record
-       Reserved_0_5 at 0 range 0 .. 5;
-       PRI_00 at 0 range 6 .. 7;
-       Reserved_8_13 at 0 range 8 .. 13;
-       PRI_01 at 0 range 14 .. 15;
-       Reserved_16_21 at 0 range 16 .. 21;
-       PRI_02 at 0 range 22 .. 23;
-       Reserved_24_29 at 0 range 24 .. 29;
-       PRI_03 at 0 range 30 .. 31;
-     end record;
+   for IPR0_Register use record
+      Reserved_0_5   at 0 range 0 .. 5;
+      PRI_00         at 0 range 6 .. 7;
+      Reserved_8_13  at 0 range 8 .. 13;
+      PRI_01         at 0 range 14 .. 15;
+      Reserved_16_21 at 0 range 16 .. 21;
+      PRI_02         at 0 range 22 .. 23;
+      Reserved_24_29 at 0 range 24 .. 29;
+      PRI_03         at 0 range 30 .. 31;
+   end record;
 
    subtype IPR1_PRI_40_Field is HAL.UInt2;
    subtype IPR1_PRI_41_Field is HAL.UInt2;
@@ -79,22 +76,19 @@ package STM32_SVD.NVIC is
       --  PRI_43
       PRI_43         : IPR1_PRI_43_Field := 16#0#;
    end record
-   with
-     Volatile_Full_Access,
-     Object_Size => 32,
-     Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
 
-   for IPR1_Register use
-     record
-       Reserved_0_5 at 0 range 0 .. 5;
-       PRI_40 at 0 range 6 .. 7;
-       Reserved_8_13 at 0 range 8 .. 13;
-       PRI_41 at 0 range 14 .. 15;
-       Reserved_16_21 at 0 range 16 .. 21;
-       PRI_42 at 0 range 22 .. 23;
-       Reserved_24_29 at 0 range 24 .. 29;
-       PRI_43 at 0 range 30 .. 31;
-     end record;
+   for IPR1_Register use record
+      Reserved_0_5   at 0 range 0 .. 5;
+      PRI_40         at 0 range 6 .. 7;
+      Reserved_8_13  at 0 range 8 .. 13;
+      PRI_41         at 0 range 14 .. 15;
+      Reserved_16_21 at 0 range 16 .. 21;
+      PRI_42         at 0 range 22 .. 23;
+      Reserved_24_29 at 0 range 24 .. 29;
+      PRI_43         at 0 range 30 .. 31;
+   end record;
 
    subtype IPR2_PRI_80_Field is HAL.UInt2;
    subtype IPR2_PRI_81_Field is HAL.UInt2;
@@ -120,22 +114,19 @@ package STM32_SVD.NVIC is
       --  PRI_83
       PRI_83         : IPR2_PRI_83_Field := 16#0#;
    end record
-   with
-     Volatile_Full_Access,
-     Object_Size => 32,
-     Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
 
-   for IPR2_Register use
-     record
-       Reserved_0_5 at 0 range 0 .. 5;
-       PRI_80 at 0 range 6 .. 7;
-       Reserved_8_13 at 0 range 8 .. 13;
-       PRI_81 at 0 range 14 .. 15;
-       Reserved_16_21 at 0 range 16 .. 21;
-       PRI_82 at 0 range 22 .. 23;
-       Reserved_24_29 at 0 range 24 .. 29;
-       PRI_83 at 0 range 30 .. 31;
-     end record;
+   for IPR2_Register use record
+      Reserved_0_5   at 0 range 0 .. 5;
+      PRI_80         at 0 range 6 .. 7;
+      Reserved_8_13  at 0 range 8 .. 13;
+      PRI_81         at 0 range 14 .. 15;
+      Reserved_16_21 at 0 range 16 .. 21;
+      PRI_82         at 0 range 22 .. 23;
+      Reserved_24_29 at 0 range 24 .. 29;
+      PRI_83         at 0 range 30 .. 31;
+   end record;
 
    subtype IPR3_PRI_120_Field is HAL.UInt2;
    subtype IPR3_PRI_121_Field is HAL.UInt2;
@@ -161,22 +152,19 @@ package STM32_SVD.NVIC is
       --  PRI_123
       PRI_123        : IPR3_PRI_123_Field := 16#0#;
    end record
-   with
-     Volatile_Full_Access,
-     Object_Size => 32,
-     Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
 
-   for IPR3_Register use
-     record
-       Reserved_0_5 at 0 range 0 .. 5;
-       PRI_120 at 0 range 6 .. 7;
-       Reserved_8_13 at 0 range 8 .. 13;
-       PRI_121 at 0 range 14 .. 15;
-       Reserved_16_21 at 0 range 16 .. 21;
-       PRI_122 at 0 range 22 .. 23;
-       Reserved_24_29 at 0 range 24 .. 29;
-       PRI_123 at 0 range 30 .. 31;
-     end record;
+   for IPR3_Register use record
+      Reserved_0_5   at 0 range 0 .. 5;
+      PRI_120        at 0 range 6 .. 7;
+      Reserved_8_13  at 0 range 8 .. 13;
+      PRI_121        at 0 range 14 .. 15;
+      Reserved_16_21 at 0 range 16 .. 21;
+      PRI_122        at 0 range 22 .. 23;
+      Reserved_24_29 at 0 range 24 .. 29;
+      PRI_123        at 0 range 30 .. 31;
+   end record;
 
    subtype IPR4_PRI_160_Field is HAL.UInt2;
    subtype IPR4_PRI_161_Field is HAL.UInt2;
@@ -202,22 +190,19 @@ package STM32_SVD.NVIC is
       --  PRI_163
       PRI_163        : IPR4_PRI_163_Field := 16#0#;
    end record
-   with
-     Volatile_Full_Access,
-     Object_Size => 32,
-     Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
 
-   for IPR4_Register use
-     record
-       Reserved_0_5 at 0 range 0 .. 5;
-       PRI_160 at 0 range 6 .. 7;
-       Reserved_8_13 at 0 range 8 .. 13;
-       PRI_161 at 0 range 14 .. 15;
-       Reserved_16_21 at 0 range 16 .. 21;
-       PRI_162 at 0 range 22 .. 23;
-       Reserved_24_29 at 0 range 24 .. 29;
-       PRI_163 at 0 range 30 .. 31;
-     end record;
+   for IPR4_Register use record
+      Reserved_0_5   at 0 range 0 .. 5;
+      PRI_160        at 0 range 6 .. 7;
+      Reserved_8_13  at 0 range 8 .. 13;
+      PRI_161        at 0 range 14 .. 15;
+      Reserved_16_21 at 0 range 16 .. 21;
+      PRI_162        at 0 range 22 .. 23;
+      Reserved_24_29 at 0 range 24 .. 29;
+      PRI_163        at 0 range 30 .. 31;
+   end record;
 
    subtype IPR5_PRI_200_Field is HAL.UInt2;
    subtype IPR5_PRI_201_Field is HAL.UInt2;
@@ -243,22 +228,19 @@ package STM32_SVD.NVIC is
       --  PRI_203
       PRI_203        : IPR5_PRI_203_Field := 16#0#;
    end record
-   with
-     Volatile_Full_Access,
-     Object_Size => 32,
-     Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
 
-   for IPR5_Register use
-     record
-       Reserved_0_5 at 0 range 0 .. 5;
-       PRI_200 at 0 range 6 .. 7;
-       Reserved_8_13 at 0 range 8 .. 13;
-       PRI_201 at 0 range 14 .. 15;
-       Reserved_16_21 at 0 range 16 .. 21;
-       PRI_202 at 0 range 22 .. 23;
-       Reserved_24_29 at 0 range 24 .. 29;
-       PRI_203 at 0 range 30 .. 31;
-     end record;
+   for IPR5_Register use record
+      Reserved_0_5   at 0 range 0 .. 5;
+      PRI_200        at 0 range 6 .. 7;
+      Reserved_8_13  at 0 range 8 .. 13;
+      PRI_201        at 0 range 14 .. 15;
+      Reserved_16_21 at 0 range 16 .. 21;
+      PRI_202        at 0 range 22 .. 23;
+      Reserved_24_29 at 0 range 24 .. 29;
+      PRI_203        at 0 range 30 .. 31;
+   end record;
 
    subtype IPR6_PRI_240_Field is HAL.UInt2;
    subtype IPR6_PRI_241_Field is HAL.UInt2;
@@ -284,22 +266,19 @@ package STM32_SVD.NVIC is
       --  PRI_243
       PRI_243        : IPR6_PRI_243_Field := 16#0#;
    end record
-   with
-     Volatile_Full_Access,
-     Object_Size => 32,
-     Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
 
-   for IPR6_Register use
-     record
-       Reserved_0_5 at 0 range 0 .. 5;
-       PRI_240 at 0 range 6 .. 7;
-       Reserved_8_13 at 0 range 8 .. 13;
-       PRI_241 at 0 range 14 .. 15;
-       Reserved_16_21 at 0 range 16 .. 21;
-       PRI_242 at 0 range 22 .. 23;
-       Reserved_24_29 at 0 range 24 .. 29;
-       PRI_243 at 0 range 30 .. 31;
-     end record;
+   for IPR6_Register use record
+      Reserved_0_5   at 0 range 0 .. 5;
+      PRI_240        at 0 range 6 .. 7;
+      Reserved_8_13  at 0 range 8 .. 13;
+      PRI_241        at 0 range 14 .. 15;
+      Reserved_16_21 at 0 range 16 .. 21;
+      PRI_242        at 0 range 22 .. 23;
+      Reserved_24_29 at 0 range 24 .. 29;
+      PRI_243        at 0 range 30 .. 31;
+   end record;
 
    subtype IPR7_PRI_280_Field is HAL.UInt2;
    subtype IPR7_PRI_281_Field is HAL.UInt2;
@@ -325,22 +304,19 @@ package STM32_SVD.NVIC is
       --  PRI_283
       PRI_283        : IPR7_PRI_283_Field := 16#0#;
    end record
-   with
-     Volatile_Full_Access,
-     Object_Size => 32,
-     Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
 
-   for IPR7_Register use
-     record
-       Reserved_0_5 at 0 range 0 .. 5;
-       PRI_280 at 0 range 6 .. 7;
-       Reserved_8_13 at 0 range 8 .. 13;
-       PRI_281 at 0 range 14 .. 15;
-       Reserved_16_21 at 0 range 16 .. 21;
-       PRI_282 at 0 range 22 .. 23;
-       Reserved_24_29 at 0 range 24 .. 29;
-       PRI_283 at 0 range 30 .. 31;
-     end record;
+   for IPR7_Register use record
+      Reserved_0_5   at 0 range 0 .. 5;
+      PRI_280        at 0 range 6 .. 7;
+      Reserved_8_13  at 0 range 8 .. 13;
+      PRI_281        at 0 range 14 .. 15;
+      Reserved_16_21 at 0 range 16 .. 21;
+      PRI_282        at 0 range 22 .. 23;
+      Reserved_24_29 at 0 range 24 .. 29;
+      PRI_283        at 0 range 30 .. 31;
+   end record;
 
    -----------------
    -- Peripherals --
@@ -373,26 +349,25 @@ package STM32_SVD.NVIC is
       --  Interrupt Priority Register 7
       IPR7 : aliased IPR7_Register;
    end record
-   with Volatile;
+     with Volatile;
 
-   for NVIC_Peripheral use
-     record
-       ISER at 16#0# range 0 .. 31;
-       ICER at 16#80# range 0 .. 31;
-       ISPR at 16#100# range 0 .. 31;
-       ICPR at 16#180# range 0 .. 31;
-       IPR0 at 16#300# range 0 .. 31;
-       IPR1 at 16#304# range 0 .. 31;
-       IPR2 at 16#308# range 0 .. 31;
-       IPR3 at 16#30C# range 0 .. 31;
-       IPR4 at 16#310# range 0 .. 31;
-       IPR5 at 16#314# range 0 .. 31;
-       IPR6 at 16#318# range 0 .. 31;
-       IPR7 at 16#31C# range 0 .. 31;
-     end record;
+   for NVIC_Peripheral use record
+      ISER at 16#0# range 0 .. 31;
+      ICER at 16#80# range 0 .. 31;
+      ISPR at 16#100# range 0 .. 31;
+      ICPR at 16#180# range 0 .. 31;
+      IPR0 at 16#300# range 0 .. 31;
+      IPR1 at 16#304# range 0 .. 31;
+      IPR2 at 16#308# range 0 .. 31;
+      IPR3 at 16#30C# range 0 .. 31;
+      IPR4 at 16#310# range 0 .. 31;
+      IPR5 at 16#314# range 0 .. 31;
+      IPR6 at 16#318# range 0 .. 31;
+      IPR7 at 16#31C# range 0 .. 31;
+   end record;
 
    --  Nested Vectored Interrupt Controller
    NVIC_Periph : aliased NVIC_Peripheral
-   with Import, Address => NVIC_Base;
+     with Import, Address => NVIC_Base;
 
 end STM32_SVD.NVIC;

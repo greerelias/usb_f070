@@ -1,6 +1,6 @@
 pragma Style_Checks (Off);
 
---  This spec has been automatically generated from STM32F0x2.svd
+--  This spec has been automatically generated from STM32F0x0.svd
 
 pragma Restrictions (No_Elaboration_Code);
 
@@ -29,20 +29,17 @@ package STM32_SVD.STK is
       --  unspecified
       Reserved_17_31 : HAL.UInt15 := 16#0#;
    end record
-   with
-     Volatile_Full_Access,
-     Object_Size => 32,
-     Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
 
-   for CSR_Register use
-     record
-       ENABLE at 0 range 0 .. 0;
-       TICKINT at 0 range 1 .. 1;
-       CLKSOURCE at 0 range 2 .. 2;
-       Reserved_3_15 at 0 range 3 .. 15;
-       COUNTFLAG at 0 range 16 .. 16;
-       Reserved_17_31 at 0 range 17 .. 31;
-     end record;
+   for CSR_Register use record
+      ENABLE         at 0 range 0 .. 0;
+      TICKINT        at 0 range 1 .. 1;
+      CLKSOURCE      at 0 range 2 .. 2;
+      Reserved_3_15  at 0 range 3 .. 15;
+      COUNTFLAG      at 0 range 16 .. 16;
+      Reserved_17_31 at 0 range 17 .. 31;
+   end record;
 
    subtype RVR_RELOAD_Field is HAL.UInt24;
 
@@ -53,16 +50,13 @@ package STM32_SVD.STK is
       --  unspecified
       Reserved_24_31 : HAL.UInt8 := 16#0#;
    end record
-   with
-     Volatile_Full_Access,
-     Object_Size => 32,
-     Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
 
-   for RVR_Register use
-     record
-       RELOAD at 0 range 0 .. 23;
-       Reserved_24_31 at 0 range 24 .. 31;
-     end record;
+   for RVR_Register use record
+      RELOAD         at 0 range 0 .. 23;
+      Reserved_24_31 at 0 range 24 .. 31;
+   end record;
 
    subtype CVR_CURRENT_Field is HAL.UInt24;
 
@@ -73,16 +67,13 @@ package STM32_SVD.STK is
       --  unspecified
       Reserved_24_31 : HAL.UInt8 := 16#0#;
    end record
-   with
-     Volatile_Full_Access,
-     Object_Size => 32,
-     Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
 
-   for CVR_Register use
-     record
-       CURRENT at 0 range 0 .. 23;
-       Reserved_24_31 at 0 range 24 .. 31;
-     end record;
+   for CVR_Register use record
+      CURRENT        at 0 range 0 .. 23;
+      Reserved_24_31 at 0 range 24 .. 31;
+   end record;
 
    subtype CALIB_TENMS_Field is HAL.UInt24;
 
@@ -97,18 +88,15 @@ package STM32_SVD.STK is
       --  NOREF flag. Reads as zero
       NOREF          : Boolean := False;
    end record
-   with
-     Volatile_Full_Access,
-     Object_Size => 32,
-     Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
 
-   for CALIB_Register use
-     record
-       TENMS at 0 range 0 .. 23;
-       Reserved_24_29 at 0 range 24 .. 29;
-       SKEW at 0 range 30 .. 30;
-       NOREF at 0 range 31 .. 31;
-     end record;
+   for CALIB_Register use record
+      TENMS          at 0 range 0 .. 23;
+      Reserved_24_29 at 0 range 24 .. 29;
+      SKEW           at 0 range 30 .. 30;
+      NOREF          at 0 range 31 .. 31;
+   end record;
 
    -----------------
    -- Peripherals --
@@ -125,18 +113,17 @@ package STM32_SVD.STK is
       --  SysTick calibration value register
       CALIB : aliased CALIB_Register;
    end record
-   with Volatile;
+     with Volatile;
 
-   for STK_Peripheral use
-     record
-       CSR at 16#0# range 0 .. 31;
-       RVR at 16#4# range 0 .. 31;
-       CVR at 16#8# range 0 .. 31;
-       CALIB at 16#C# range 0 .. 31;
-     end record;
+   for STK_Peripheral use record
+      CSR   at 16#0# range 0 .. 31;
+      RVR   at 16#4# range 0 .. 31;
+      CVR   at 16#8# range 0 .. 31;
+      CALIB at 16#C# range 0 .. 31;
+   end record;
 
    --  SysTick timer
    STK_Periph : aliased STK_Peripheral
-   with Import, Address => STK_Base;
+     with Import, Address => STK_Base;
 
 end STM32_SVD.STK;

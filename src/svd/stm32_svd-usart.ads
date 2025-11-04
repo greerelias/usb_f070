@@ -1,6 +1,6 @@
 pragma Style_Checks (Off);
 
---  This spec has been automatically generated from STM32F0x2.svd
+--  This spec has been automatically generated from STM32F0x0.svd
 
 pragma Restrictions (No_Elaboration_Code);
 
@@ -64,36 +64,33 @@ package STM32_SVD.USART is
       --  unspecified
       Reserved_29_31 : HAL.UInt3 := 16#0#;
    end record
-   with
-     Volatile_Full_Access,
-     Object_Size => 32,
-     Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
 
-   for CR1_Register use
-     record
-       UE at 0 range 0 .. 0;
-       UESM at 0 range 1 .. 1;
-       RE at 0 range 2 .. 2;
-       TE at 0 range 3 .. 3;
-       IDLEIE at 0 range 4 .. 4;
-       RXNEIE at 0 range 5 .. 5;
-       TCIE at 0 range 6 .. 6;
-       TXEIE at 0 range 7 .. 7;
-       PEIE at 0 range 8 .. 8;
-       PS at 0 range 9 .. 9;
-       PCE at 0 range 10 .. 10;
-       WAKE at 0 range 11 .. 11;
-       M at 0 range 12 .. 12;
-       MME at 0 range 13 .. 13;
-       CMIE at 0 range 14 .. 14;
-       OVER8 at 0 range 15 .. 15;
-       DEDT at 0 range 16 .. 20;
-       DEAT at 0 range 21 .. 25;
-       RTOIE at 0 range 26 .. 26;
-       EOBIE at 0 range 27 .. 27;
-       M1 at 0 range 28 .. 28;
-       Reserved_29_31 at 0 range 29 .. 31;
-     end record;
+   for CR1_Register use record
+      UE             at 0 range 0 .. 0;
+      UESM           at 0 range 1 .. 1;
+      RE             at 0 range 2 .. 2;
+      TE             at 0 range 3 .. 3;
+      IDLEIE         at 0 range 4 .. 4;
+      RXNEIE         at 0 range 5 .. 5;
+      TCIE           at 0 range 6 .. 6;
+      TXEIE          at 0 range 7 .. 7;
+      PEIE           at 0 range 8 .. 8;
+      PS             at 0 range 9 .. 9;
+      PCE            at 0 range 10 .. 10;
+      WAKE           at 0 range 11 .. 11;
+      M              at 0 range 12 .. 12;
+      MME            at 0 range 13 .. 13;
+      CMIE           at 0 range 14 .. 14;
+      OVER8          at 0 range 15 .. 15;
+      DEDT           at 0 range 16 .. 20;
+      DEAT           at 0 range 21 .. 25;
+      RTOIE          at 0 range 26 .. 26;
+      EOBIE          at 0 range 27 .. 27;
+      M1             at 0 range 28 .. 28;
+      Reserved_29_31 at 0 range 29 .. 31;
+   end record;
 
    subtype CR2_STOP_Field is HAL.UInt2;
    subtype CR2_ABRMOD_Field is HAL.UInt2;
@@ -102,27 +99,27 @@ package STM32_SVD.USART is
 
    --  CR2_ADD array
    type CR2_ADD_Field_Array is array (0 .. 1) of CR2_ADD_Element
-   with Component_Size => 4, Size => 8;
+     with Component_Size => 4, Size => 8;
 
    --  Type definition for CR2_ADD
-   type CR2_ADD_Field (As_Array : Boolean := False) is record
+   type CR2_ADD_Field
+     (As_Array : Boolean := False)
+   is record
       case As_Array is
          when False =>
             --  ADD as a value
             Val : HAL.UInt8;
-
          when True =>
             --  ADD as an array
             Arr : CR2_ADD_Field_Array;
       end case;
    end record
-   with Unchecked_Union, Size => 8;
+     with Unchecked_Union, Size => 8;
 
-   for CR2_ADD_Field use
-     record
-       Val at 0 range 0 .. 7;
-       Arr at 0 range 0 .. 7;
-     end record;
+   for CR2_ADD_Field use record
+      Val at 0 range 0 .. 7;
+      Arr at 0 range 0 .. 7;
+   end record;
 
    --  Control register 2
    type CR2_Register is record
@@ -167,34 +164,31 @@ package STM32_SVD.USART is
       --  Address of the USART node
       ADD          : CR2_ADD_Field := (As_Array => False, Val => 16#0#);
    end record
-   with
-     Volatile_Full_Access,
-     Object_Size => 32,
-     Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
 
-   for CR2_Register use
-     record
-       Reserved_0_3 at 0 range 0 .. 3;
-       ADDM7 at 0 range 4 .. 4;
-       LBDL at 0 range 5 .. 5;
-       LBDIE at 0 range 6 .. 6;
-       Reserved_7_7 at 0 range 7 .. 7;
-       LBCL at 0 range 8 .. 8;
-       CPHA at 0 range 9 .. 9;
-       CPOL at 0 range 10 .. 10;
-       CLKEN at 0 range 11 .. 11;
-       STOP at 0 range 12 .. 13;
-       LINEN at 0 range 14 .. 14;
-       SWAP at 0 range 15 .. 15;
-       RXINV at 0 range 16 .. 16;
-       TXINV at 0 range 17 .. 17;
-       DATAINV at 0 range 18 .. 18;
-       MSBFIRST at 0 range 19 .. 19;
-       ABREN at 0 range 20 .. 20;
-       ABRMOD at 0 range 21 .. 22;
-       RTOEN at 0 range 23 .. 23;
-       ADD at 0 range 24 .. 31;
-     end record;
+   for CR2_Register use record
+      Reserved_0_3 at 0 range 0 .. 3;
+      ADDM7        at 0 range 4 .. 4;
+      LBDL         at 0 range 5 .. 5;
+      LBDIE        at 0 range 6 .. 6;
+      Reserved_7_7 at 0 range 7 .. 7;
+      LBCL         at 0 range 8 .. 8;
+      CPHA         at 0 range 9 .. 9;
+      CPOL         at 0 range 10 .. 10;
+      CLKEN        at 0 range 11 .. 11;
+      STOP         at 0 range 12 .. 13;
+      LINEN        at 0 range 14 .. 14;
+      SWAP         at 0 range 15 .. 15;
+      RXINV        at 0 range 16 .. 16;
+      TXINV        at 0 range 17 .. 17;
+      DATAINV      at 0 range 18 .. 18;
+      MSBFIRST     at 0 range 19 .. 19;
+      ABREN        at 0 range 20 .. 20;
+      ABRMOD       at 0 range 21 .. 22;
+      RTOEN        at 0 range 23 .. 23;
+      ADD          at 0 range 24 .. 31;
+   end record;
 
    subtype CR3_SCARCNT_Field is HAL.UInt3;
    subtype CR3_WUS_Field is HAL.UInt2;
@@ -244,35 +238,32 @@ package STM32_SVD.USART is
       --  unspecified
       Reserved_23_31 : HAL.UInt9 := 16#0#;
    end record
-   with
-     Volatile_Full_Access,
-     Object_Size => 32,
-     Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
 
-   for CR3_Register use
-     record
-       EIE at 0 range 0 .. 0;
-       IREN at 0 range 1 .. 1;
-       IRLP at 0 range 2 .. 2;
-       HDSEL at 0 range 3 .. 3;
-       NACK at 0 range 4 .. 4;
-       SCEN at 0 range 5 .. 5;
-       DMAR at 0 range 6 .. 6;
-       DMAT at 0 range 7 .. 7;
-       RTSE at 0 range 8 .. 8;
-       CTSE at 0 range 9 .. 9;
-       CTSIE at 0 range 10 .. 10;
-       ONEBIT at 0 range 11 .. 11;
-       OVRDIS at 0 range 12 .. 12;
-       DDRE at 0 range 13 .. 13;
-       DEM at 0 range 14 .. 14;
-       DEP at 0 range 15 .. 15;
-       Reserved_16_16 at 0 range 16 .. 16;
-       SCARCNT at 0 range 17 .. 19;
-       WUS at 0 range 20 .. 21;
-       WUFIE at 0 range 22 .. 22;
-       Reserved_23_31 at 0 range 23 .. 31;
-     end record;
+   for CR3_Register use record
+      EIE            at 0 range 0 .. 0;
+      IREN           at 0 range 1 .. 1;
+      IRLP           at 0 range 2 .. 2;
+      HDSEL          at 0 range 3 .. 3;
+      NACK           at 0 range 4 .. 4;
+      SCEN           at 0 range 5 .. 5;
+      DMAR           at 0 range 6 .. 6;
+      DMAT           at 0 range 7 .. 7;
+      RTSE           at 0 range 8 .. 8;
+      CTSE           at 0 range 9 .. 9;
+      CTSIE          at 0 range 10 .. 10;
+      ONEBIT         at 0 range 11 .. 11;
+      OVRDIS         at 0 range 12 .. 12;
+      DDRE           at 0 range 13 .. 13;
+      DEM            at 0 range 14 .. 14;
+      DEP            at 0 range 15 .. 15;
+      Reserved_16_16 at 0 range 16 .. 16;
+      SCARCNT        at 0 range 17 .. 19;
+      WUS            at 0 range 20 .. 21;
+      WUFIE          at 0 range 22 .. 22;
+      Reserved_23_31 at 0 range 23 .. 31;
+   end record;
 
    subtype BRR_DIV_Fraction_Field is HAL.UInt4;
    subtype BRR_DIV_Mantissa_Field is HAL.UInt12;
@@ -286,17 +277,14 @@ package STM32_SVD.USART is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-   with
-     Volatile_Full_Access,
-     Object_Size => 32,
-     Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
 
-   for BRR_Register use
-     record
-       DIV_Fraction at 0 range 0 .. 3;
-       DIV_Mantissa at 0 range 4 .. 15;
-       Reserved_16_31 at 0 range 16 .. 31;
-     end record;
+   for BRR_Register use record
+      DIV_Fraction   at 0 range 0 .. 3;
+      DIV_Mantissa   at 0 range 4 .. 15;
+      Reserved_16_31 at 0 range 16 .. 31;
+   end record;
 
    subtype GTPR_PSC_Field is HAL.UInt8;
    subtype GTPR_GT_Field is HAL.UInt8;
@@ -310,17 +298,14 @@ package STM32_SVD.USART is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-   with
-     Volatile_Full_Access,
-     Object_Size => 32,
-     Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
 
-   for GTPR_Register use
-     record
-       PSC at 0 range 0 .. 7;
-       GT at 0 range 8 .. 15;
-       Reserved_16_31 at 0 range 16 .. 31;
-     end record;
+   for GTPR_Register use record
+      PSC            at 0 range 0 .. 7;
+      GT             at 0 range 8 .. 15;
+      Reserved_16_31 at 0 range 16 .. 31;
+   end record;
 
    subtype RTOR_RTO_Field is HAL.UInt24;
    subtype RTOR_BLEN_Field is HAL.UInt8;
@@ -332,16 +317,13 @@ package STM32_SVD.USART is
       --  Block Length
       BLEN : RTOR_BLEN_Field := 16#0#;
    end record
-   with
-     Volatile_Full_Access,
-     Object_Size => 32,
-     Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
 
-   for RTOR_Register use
-     record
-       RTO at 0 range 0 .. 23;
-       BLEN at 0 range 24 .. 31;
-     end record;
+   for RTOR_Register use record
+      RTO  at 0 range 0 .. 23;
+      BLEN at 0 range 24 .. 31;
+   end record;
 
    --  Request register
    type RQR_Register is record
@@ -358,20 +340,17 @@ package STM32_SVD.USART is
       --  unspecified
       Reserved_5_31 : HAL.UInt27 := 16#0#;
    end record
-   with
-     Volatile_Full_Access,
-     Object_Size => 32,
-     Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
 
-   for RQR_Register use
-     record
-       ABRRQ at 0 range 0 .. 0;
-       SBKRQ at 0 range 1 .. 1;
-       MMRQ at 0 range 2 .. 2;
-       RXFRQ at 0 range 3 .. 3;
-       TXFRQ at 0 range 4 .. 4;
-       Reserved_5_31 at 0 range 5 .. 31;
-     end record;
+   for RQR_Register use record
+      ABRRQ         at 0 range 0 .. 0;
+      SBKRQ         at 0 range 1 .. 1;
+      MMRQ          at 0 range 2 .. 2;
+      RXFRQ         at 0 range 3 .. 3;
+      TXFRQ         at 0 range 4 .. 4;
+      Reserved_5_31 at 0 range 5 .. 31;
+   end record;
 
    --  Interrupt & status register
    type ISR_Register is record
@@ -424,38 +403,35 @@ package STM32_SVD.USART is
       --  unspecified
       Reserved_23_31 : HAL.UInt9;
    end record
-   with
-     Volatile_Full_Access,
-     Object_Size => 32,
-     Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
 
-   for ISR_Register use
-     record
-       PE at 0 range 0 .. 0;
-       FE at 0 range 1 .. 1;
-       NF at 0 range 2 .. 2;
-       ORE at 0 range 3 .. 3;
-       IDLE at 0 range 4 .. 4;
-       RXNE at 0 range 5 .. 5;
-       TC at 0 range 6 .. 6;
-       TXE at 0 range 7 .. 7;
-       LBDF at 0 range 8 .. 8;
-       CTSIF at 0 range 9 .. 9;
-       CTS at 0 range 10 .. 10;
-       RTOF at 0 range 11 .. 11;
-       EOBF at 0 range 12 .. 12;
-       Reserved_13_13 at 0 range 13 .. 13;
-       ABRE at 0 range 14 .. 14;
-       ABRF at 0 range 15 .. 15;
-       BUSY at 0 range 16 .. 16;
-       CMF at 0 range 17 .. 17;
-       SBKF at 0 range 18 .. 18;
-       RWU at 0 range 19 .. 19;
-       WUF at 0 range 20 .. 20;
-       TEACK at 0 range 21 .. 21;
-       REACK at 0 range 22 .. 22;
-       Reserved_23_31 at 0 range 23 .. 31;
-     end record;
+   for ISR_Register use record
+      PE             at 0 range 0 .. 0;
+      FE             at 0 range 1 .. 1;
+      NF             at 0 range 2 .. 2;
+      ORE            at 0 range 3 .. 3;
+      IDLE           at 0 range 4 .. 4;
+      RXNE           at 0 range 5 .. 5;
+      TC             at 0 range 6 .. 6;
+      TXE            at 0 range 7 .. 7;
+      LBDF           at 0 range 8 .. 8;
+      CTSIF          at 0 range 9 .. 9;
+      CTS            at 0 range 10 .. 10;
+      RTOF           at 0 range 11 .. 11;
+      EOBF           at 0 range 12 .. 12;
+      Reserved_13_13 at 0 range 13 .. 13;
+      ABRE           at 0 range 14 .. 14;
+      ABRF           at 0 range 15 .. 15;
+      BUSY           at 0 range 16 .. 16;
+      CMF            at 0 range 17 .. 17;
+      SBKF           at 0 range 18 .. 18;
+      RWU            at 0 range 19 .. 19;
+      WUF            at 0 range 20 .. 20;
+      TEACK          at 0 range 21 .. 21;
+      REACK          at 0 range 22 .. 22;
+      Reserved_23_31 at 0 range 23 .. 31;
+   end record;
 
    --  Interrupt flag clear register
    type ICR_Register is record
@@ -496,32 +472,29 @@ package STM32_SVD.USART is
       --  unspecified
       Reserved_21_31 : HAL.UInt11 := 16#0#;
    end record
-   with
-     Volatile_Full_Access,
-     Object_Size => 32,
-     Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
 
-   for ICR_Register use
-     record
-       PECF at 0 range 0 .. 0;
-       FECF at 0 range 1 .. 1;
-       NCF at 0 range 2 .. 2;
-       ORECF at 0 range 3 .. 3;
-       IDLECF at 0 range 4 .. 4;
-       Reserved_5_5 at 0 range 5 .. 5;
-       TCCF at 0 range 6 .. 6;
-       Reserved_7_7 at 0 range 7 .. 7;
-       LBDCF at 0 range 8 .. 8;
-       CTSCF at 0 range 9 .. 9;
-       Reserved_10_10 at 0 range 10 .. 10;
-       RTOCF at 0 range 11 .. 11;
-       EOBCF at 0 range 12 .. 12;
-       Reserved_13_16 at 0 range 13 .. 16;
-       CMCF at 0 range 17 .. 17;
-       Reserved_18_19 at 0 range 18 .. 19;
-       WUCF at 0 range 20 .. 20;
-       Reserved_21_31 at 0 range 21 .. 31;
-     end record;
+   for ICR_Register use record
+      PECF           at 0 range 0 .. 0;
+      FECF           at 0 range 1 .. 1;
+      NCF            at 0 range 2 .. 2;
+      ORECF          at 0 range 3 .. 3;
+      IDLECF         at 0 range 4 .. 4;
+      Reserved_5_5   at 0 range 5 .. 5;
+      TCCF           at 0 range 6 .. 6;
+      Reserved_7_7   at 0 range 7 .. 7;
+      LBDCF          at 0 range 8 .. 8;
+      CTSCF          at 0 range 9 .. 9;
+      Reserved_10_10 at 0 range 10 .. 10;
+      RTOCF          at 0 range 11 .. 11;
+      EOBCF          at 0 range 12 .. 12;
+      Reserved_13_16 at 0 range 13 .. 16;
+      CMCF           at 0 range 17 .. 17;
+      Reserved_18_19 at 0 range 18 .. 19;
+      WUCF           at 0 range 20 .. 20;
+      Reserved_21_31 at 0 range 21 .. 31;
+   end record;
 
    subtype RDR_RDR_Field is HAL.UInt9;
 
@@ -532,16 +505,13 @@ package STM32_SVD.USART is
       --  unspecified
       Reserved_9_31 : HAL.UInt23;
    end record
-   with
-     Volatile_Full_Access,
-     Object_Size => 32,
-     Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
 
-   for RDR_Register use
-     record
-       RDR at 0 range 0 .. 8;
-       Reserved_9_31 at 0 range 9 .. 31;
-     end record;
+   for RDR_Register use record
+      RDR           at 0 range 0 .. 8;
+      Reserved_9_31 at 0 range 9 .. 31;
+   end record;
 
    subtype TDR_TDR_Field is HAL.UInt9;
 
@@ -552,16 +522,13 @@ package STM32_SVD.USART is
       --  unspecified
       Reserved_9_31 : HAL.UInt23 := 16#0#;
    end record
-   with
-     Volatile_Full_Access,
-     Object_Size => 32,
-     Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
 
-   for TDR_Register use
-     record
-       TDR at 0 range 0 .. 8;
-       Reserved_9_31 at 0 range 9 .. 31;
-     end record;
+   for TDR_Register use record
+      TDR           at 0 range 0 .. 8;
+      Reserved_9_31 at 0 range 9 .. 31;
+   end record;
 
    -----------------
    -- Peripherals --
@@ -592,37 +559,44 @@ package STM32_SVD.USART is
       --  Transmit data register
       TDR  : aliased TDR_Register;
    end record
-   with Volatile;
+     with Volatile;
 
-   for USART_Peripheral use
-     record
-       CR1 at 16#0# range 0 .. 31;
-       CR2 at 16#4# range 0 .. 31;
-       CR3 at 16#8# range 0 .. 31;
-       BRR at 16#C# range 0 .. 31;
-       GTPR at 16#10# range 0 .. 31;
-       RTOR at 16#14# range 0 .. 31;
-       RQR at 16#18# range 0 .. 31;
-       ISR at 16#1C# range 0 .. 31;
-       ICR at 16#20# range 0 .. 31;
-       RDR at 16#24# range 0 .. 31;
-       TDR at 16#28# range 0 .. 31;
-     end record;
+   for USART_Peripheral use record
+      CR1  at 16#0# range 0 .. 31;
+      CR2  at 16#4# range 0 .. 31;
+      CR3  at 16#8# range 0 .. 31;
+      BRR  at 16#C# range 0 .. 31;
+      GTPR at 16#10# range 0 .. 31;
+      RTOR at 16#14# range 0 .. 31;
+      RQR  at 16#18# range 0 .. 31;
+      ISR  at 16#1C# range 0 .. 31;
+      ICR  at 16#20# range 0 .. 31;
+      RDR  at 16#24# range 0 .. 31;
+      TDR  at 16#28# range 0 .. 31;
+   end record;
 
    --  Universal synchronous asynchronous receiver transmitter
    USART1_Periph : aliased USART_Peripheral
-   with Import, Address => USART1_Base;
+     with Import, Address => USART1_Base;
 
    --  Universal synchronous asynchronous receiver transmitter
    USART2_Periph : aliased USART_Peripheral
-   with Import, Address => USART2_Base;
+     with Import, Address => USART2_Base;
 
    --  Universal synchronous asynchronous receiver transmitter
    USART3_Periph : aliased USART_Peripheral
-   with Import, Address => USART3_Base;
+     with Import, Address => USART3_Base;
 
    --  Universal synchronous asynchronous receiver transmitter
    USART4_Periph : aliased USART_Peripheral
-   with Import, Address => USART4_Base;
+     with Import, Address => USART4_Base;
+
+   --  Universal synchronous asynchronous receiver transmitter
+   USART5_Periph : aliased USART_Peripheral
+     with Import, Address => USART5_Base;
+
+   --  Universal synchronous asynchronous receiver transmitter
+   USART6_Periph : aliased USART_Peripheral
+     with Import, Address => USART6_Base;
 
 end STM32_SVD.USART;

@@ -1,6 +1,6 @@
 pragma Style_Checks (Off);
 
---  This spec has been automatically generated from STM32F0x2.svd
+--  This spec has been automatically generated from STM32F0x0.svd
 
 pragma Restrictions (No_Elaboration_Code);
 
@@ -75,43 +75,40 @@ package STM32_SVD.DMA is
       --  unspecified
       Reserved_28_31 : HAL.UInt4;
    end record
-   with
-     Volatile_Full_Access,
-     Object_Size => 32,
-     Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
 
-   for ISR_Register use
-     record
-       GIF1 at 0 range 0 .. 0;
-       TCIF1 at 0 range 1 .. 1;
-       HTIF1 at 0 range 2 .. 2;
-       TEIF1 at 0 range 3 .. 3;
-       GIF2 at 0 range 4 .. 4;
-       TCIF2 at 0 range 5 .. 5;
-       HTIF2 at 0 range 6 .. 6;
-       TEIF2 at 0 range 7 .. 7;
-       GIF3 at 0 range 8 .. 8;
-       TCIF3 at 0 range 9 .. 9;
-       HTIF3 at 0 range 10 .. 10;
-       TEIF3 at 0 range 11 .. 11;
-       GIF4 at 0 range 12 .. 12;
-       TCIF4 at 0 range 13 .. 13;
-       HTIF4 at 0 range 14 .. 14;
-       TEIF4 at 0 range 15 .. 15;
-       GIF5 at 0 range 16 .. 16;
-       TCIF5 at 0 range 17 .. 17;
-       HTIF5 at 0 range 18 .. 18;
-       TEIF5 at 0 range 19 .. 19;
-       GIF6 at 0 range 20 .. 20;
-       TCIF6 at 0 range 21 .. 21;
-       HTIF6 at 0 range 22 .. 22;
-       TEIF6 at 0 range 23 .. 23;
-       GIF7 at 0 range 24 .. 24;
-       TCIF7 at 0 range 25 .. 25;
-       HTIF7 at 0 range 26 .. 26;
-       TEIF7 at 0 range 27 .. 27;
-       Reserved_28_31 at 0 range 28 .. 31;
-     end record;
+   for ISR_Register use record
+      GIF1           at 0 range 0 .. 0;
+      TCIF1          at 0 range 1 .. 1;
+      HTIF1          at 0 range 2 .. 2;
+      TEIF1          at 0 range 3 .. 3;
+      GIF2           at 0 range 4 .. 4;
+      TCIF2          at 0 range 5 .. 5;
+      HTIF2          at 0 range 6 .. 6;
+      TEIF2          at 0 range 7 .. 7;
+      GIF3           at 0 range 8 .. 8;
+      TCIF3          at 0 range 9 .. 9;
+      HTIF3          at 0 range 10 .. 10;
+      TEIF3          at 0 range 11 .. 11;
+      GIF4           at 0 range 12 .. 12;
+      TCIF4          at 0 range 13 .. 13;
+      HTIF4          at 0 range 14 .. 14;
+      TEIF4          at 0 range 15 .. 15;
+      GIF5           at 0 range 16 .. 16;
+      TCIF5          at 0 range 17 .. 17;
+      HTIF5          at 0 range 18 .. 18;
+      TEIF5          at 0 range 19 .. 19;
+      GIF6           at 0 range 20 .. 20;
+      TCIF6          at 0 range 21 .. 21;
+      HTIF6          at 0 range 22 .. 22;
+      TEIF6          at 0 range 23 .. 23;
+      GIF7           at 0 range 24 .. 24;
+      TCIF7          at 0 range 25 .. 25;
+      HTIF7          at 0 range 26 .. 26;
+      TEIF7          at 0 range 27 .. 27;
+      Reserved_28_31 at 0 range 28 .. 31;
+   end record;
 
    --  DMA interrupt flag clear register (DMA_IFCR)
    type IFCR_Register is record
@@ -174,43 +171,40 @@ package STM32_SVD.DMA is
       --  unspecified
       Reserved_28_31 : HAL.UInt4 := 16#0#;
    end record
-   with
-     Volatile_Full_Access,
-     Object_Size => 32,
-     Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
 
-   for IFCR_Register use
-     record
-       CGIF1 at 0 range 0 .. 0;
-       CTCIF1 at 0 range 1 .. 1;
-       CHTIF1 at 0 range 2 .. 2;
-       CTEIF1 at 0 range 3 .. 3;
-       CGIF2 at 0 range 4 .. 4;
-       CTCIF2 at 0 range 5 .. 5;
-       CHTIF2 at 0 range 6 .. 6;
-       CTEIF2 at 0 range 7 .. 7;
-       CGIF3 at 0 range 8 .. 8;
-       CTCIF3 at 0 range 9 .. 9;
-       CHTIF3 at 0 range 10 .. 10;
-       CTEIF3 at 0 range 11 .. 11;
-       CGIF4 at 0 range 12 .. 12;
-       CTCIF4 at 0 range 13 .. 13;
-       CHTIF4 at 0 range 14 .. 14;
-       CTEIF4 at 0 range 15 .. 15;
-       CGIF5 at 0 range 16 .. 16;
-       CTCIF5 at 0 range 17 .. 17;
-       CHTIF5 at 0 range 18 .. 18;
-       CTEIF5 at 0 range 19 .. 19;
-       CGIF6 at 0 range 20 .. 20;
-       CTCIF6 at 0 range 21 .. 21;
-       CHTIF6 at 0 range 22 .. 22;
-       CTEIF6 at 0 range 23 .. 23;
-       CGIF7 at 0 range 24 .. 24;
-       CTCIF7 at 0 range 25 .. 25;
-       CHTIF7 at 0 range 26 .. 26;
-       CTEIF7 at 0 range 27 .. 27;
-       Reserved_28_31 at 0 range 28 .. 31;
-     end record;
+   for IFCR_Register use record
+      CGIF1          at 0 range 0 .. 0;
+      CTCIF1         at 0 range 1 .. 1;
+      CHTIF1         at 0 range 2 .. 2;
+      CTEIF1         at 0 range 3 .. 3;
+      CGIF2          at 0 range 4 .. 4;
+      CTCIF2         at 0 range 5 .. 5;
+      CHTIF2         at 0 range 6 .. 6;
+      CTEIF2         at 0 range 7 .. 7;
+      CGIF3          at 0 range 8 .. 8;
+      CTCIF3         at 0 range 9 .. 9;
+      CHTIF3         at 0 range 10 .. 10;
+      CTEIF3         at 0 range 11 .. 11;
+      CGIF4          at 0 range 12 .. 12;
+      CTCIF4         at 0 range 13 .. 13;
+      CHTIF4         at 0 range 14 .. 14;
+      CTEIF4         at 0 range 15 .. 15;
+      CGIF5          at 0 range 16 .. 16;
+      CTCIF5         at 0 range 17 .. 17;
+      CHTIF5         at 0 range 18 .. 18;
+      CTEIF5         at 0 range 19 .. 19;
+      CGIF6          at 0 range 20 .. 20;
+      CTCIF6         at 0 range 21 .. 21;
+      CHTIF6         at 0 range 22 .. 22;
+      CTEIF6         at 0 range 23 .. 23;
+      CGIF7          at 0 range 24 .. 24;
+      CTCIF7         at 0 range 25 .. 25;
+      CHTIF7         at 0 range 26 .. 26;
+      CTEIF7         at 0 range 27 .. 27;
+      Reserved_28_31 at 0 range 28 .. 31;
+   end record;
 
    subtype CCR_PSIZE_Field is HAL.UInt2;
    subtype CCR_MSIZE_Field is HAL.UInt2;
@@ -245,27 +239,24 @@ package STM32_SVD.DMA is
       --  unspecified
       Reserved_15_31 : HAL.UInt17 := 16#0#;
    end record
-   with
-     Volatile_Full_Access,
-     Object_Size => 32,
-     Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
 
-   for CCR_Register use
-     record
-       EN at 0 range 0 .. 0;
-       TCIE at 0 range 1 .. 1;
-       HTIE at 0 range 2 .. 2;
-       TEIE at 0 range 3 .. 3;
-       DIR at 0 range 4 .. 4;
-       CIRC at 0 range 5 .. 5;
-       PINC at 0 range 6 .. 6;
-       MINC at 0 range 7 .. 7;
-       PSIZE at 0 range 8 .. 9;
-       MSIZE at 0 range 10 .. 11;
-       PL at 0 range 12 .. 13;
-       MEM2MEM at 0 range 14 .. 14;
-       Reserved_15_31 at 0 range 15 .. 31;
-     end record;
+   for CCR_Register use record
+      EN             at 0 range 0 .. 0;
+      TCIE           at 0 range 1 .. 1;
+      HTIE           at 0 range 2 .. 2;
+      TEIE           at 0 range 3 .. 3;
+      DIR            at 0 range 4 .. 4;
+      CIRC           at 0 range 5 .. 5;
+      PINC           at 0 range 6 .. 6;
+      MINC           at 0 range 7 .. 7;
+      PSIZE          at 0 range 8 .. 9;
+      MSIZE          at 0 range 10 .. 11;
+      PL             at 0 range 12 .. 13;
+      MEM2MEM        at 0 range 14 .. 14;
+      Reserved_15_31 at 0 range 15 .. 31;
+   end record;
 
    subtype CNDTR_NDT_Field is HAL.UInt16;
 
@@ -276,16 +267,13 @@ package STM32_SVD.DMA is
       --  unspecified
       Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
-   with
-     Volatile_Full_Access,
-     Object_Size => 32,
-     Bit_Order => System.Low_Order_First;
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
 
-   for CNDTR_Register use
-     record
-       NDT at 0 range 0 .. 15;
-       Reserved_16_31 at 0 range 16 .. 31;
-     end record;
+   for CNDTR_Register use record
+      NDT            at 0 range 0 .. 15;
+      Reserved_16_31 at 0 range 16 .. 31;
+   end record;
 
    -----------------
    -- Peripherals --
@@ -354,44 +342,43 @@ package STM32_SVD.DMA is
       --  DMA channel 7 memory address register
       CMAR7  : aliased HAL.UInt32;
    end record
-   with Volatile;
+     with Volatile;
 
-   for DMA1_Peripheral use
-     record
-       ISR at 16#0# range 0 .. 31;
-       IFCR at 16#4# range 0 .. 31;
-       CCR1 at 16#8# range 0 .. 31;
-       CNDTR1 at 16#C# range 0 .. 31;
-       CPAR1 at 16#10# range 0 .. 31;
-       CMAR1 at 16#14# range 0 .. 31;
-       CCR2 at 16#1C# range 0 .. 31;
-       CNDTR2 at 16#20# range 0 .. 31;
-       CPAR2 at 16#24# range 0 .. 31;
-       CMAR2 at 16#28# range 0 .. 31;
-       CCR3 at 16#30# range 0 .. 31;
-       CNDTR3 at 16#34# range 0 .. 31;
-       CPAR3 at 16#38# range 0 .. 31;
-       CMAR3 at 16#3C# range 0 .. 31;
-       CCR4 at 16#44# range 0 .. 31;
-       CNDTR4 at 16#48# range 0 .. 31;
-       CPAR4 at 16#4C# range 0 .. 31;
-       CMAR4 at 16#50# range 0 .. 31;
-       CCR5 at 16#58# range 0 .. 31;
-       CNDTR5 at 16#5C# range 0 .. 31;
-       CPAR5 at 16#60# range 0 .. 31;
-       CMAR5 at 16#64# range 0 .. 31;
-       CCR6 at 16#6C# range 0 .. 31;
-       CNDTR6 at 16#70# range 0 .. 31;
-       CPAR6 at 16#74# range 0 .. 31;
-       CMAR6 at 16#78# range 0 .. 31;
-       CCR7 at 16#80# range 0 .. 31;
-       CNDTR7 at 16#84# range 0 .. 31;
-       CPAR7 at 16#88# range 0 .. 31;
-       CMAR7 at 16#8C# range 0 .. 31;
-     end record;
+   for DMA1_Peripheral use record
+      ISR    at 16#0# range 0 .. 31;
+      IFCR   at 16#4# range 0 .. 31;
+      CCR1   at 16#8# range 0 .. 31;
+      CNDTR1 at 16#C# range 0 .. 31;
+      CPAR1  at 16#10# range 0 .. 31;
+      CMAR1  at 16#14# range 0 .. 31;
+      CCR2   at 16#1C# range 0 .. 31;
+      CNDTR2 at 16#20# range 0 .. 31;
+      CPAR2  at 16#24# range 0 .. 31;
+      CMAR2  at 16#28# range 0 .. 31;
+      CCR3   at 16#30# range 0 .. 31;
+      CNDTR3 at 16#34# range 0 .. 31;
+      CPAR3  at 16#38# range 0 .. 31;
+      CMAR3  at 16#3C# range 0 .. 31;
+      CCR4   at 16#44# range 0 .. 31;
+      CNDTR4 at 16#48# range 0 .. 31;
+      CPAR4  at 16#4C# range 0 .. 31;
+      CMAR4  at 16#50# range 0 .. 31;
+      CCR5   at 16#58# range 0 .. 31;
+      CNDTR5 at 16#5C# range 0 .. 31;
+      CPAR5  at 16#60# range 0 .. 31;
+      CMAR5  at 16#64# range 0 .. 31;
+      CCR6   at 16#6C# range 0 .. 31;
+      CNDTR6 at 16#70# range 0 .. 31;
+      CPAR6  at 16#74# range 0 .. 31;
+      CMAR6  at 16#78# range 0 .. 31;
+      CCR7   at 16#80# range 0 .. 31;
+      CNDTR7 at 16#84# range 0 .. 31;
+      CPAR7  at 16#88# range 0 .. 31;
+      CMAR7  at 16#8C# range 0 .. 31;
+   end record;
 
    --  DMA controller
    DMA1_Periph : aliased DMA1_Peripheral
-   with Import, Address => DMA1_Base;
+     with Import, Address => DMA1_Base;
 
 end STM32_SVD.DMA;
