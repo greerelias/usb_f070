@@ -27,7 +27,8 @@ package STM32.RCC is
 
    procedure Set_Sys_Clock_Source
      (This : in out Rcc_Cfgr; Source : Sys_Clock_Source);
-   procedure Enable_Crs (This : in out Rcc_Cfgr);
+   -- Commented out GE
+   --  procedure Enable_Crs (This : in out Rcc_Cfgr);
    procedure Set_Sys_Clock (This : in out Rcc_Cfgr; Freq : Positive);
    procedure Set_P_Clock (This : in out Rcc_Cfgr; Freq : Positive);
 

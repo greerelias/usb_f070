@@ -8,7 +8,8 @@
 
 with STM32_SVD.PWR; use STM32_SVD.PWR;
 with STM32_SVD.RCC; use STM32_SVD.RCC;
-with STM32_SVD.CRS; use STM32_SVD.CRS;
+--  Commented out GE
+--  with STM32_SVD.CRS; use STM32_SVD.CRS;
 
 package body STM32.RCC is
 
@@ -18,10 +19,11 @@ package body STM32.RCC is
       This.Clock_Source := Source;
    end Set_Sys_Clock_Source;
 
-   procedure Enable_Crs (This : in out Rcc_Cfgr) is
-   begin
-      This.Use_Crs := True;
-   end Enable_Crs;
+   --  Commented out GE
+   --  procedure Enable_Crs (This : in out Rcc_Cfgr) is
+   --  begin
+   --     This.Use_Crs := True;
+   --  end Enable_Crs;
 
    procedure Set_Sys_Clock (This : in out Rcc_Cfgr; Freq : Positive) is
    begin
@@ -36,10 +38,10 @@ package body STM32.RCC is
    function Get_Freq (Source : Sys_Clock_Source) return Positive is
    begin
       case Source is
-         when Hse =>
+         when Hse   =>
             return Hse_Freq;
 
-         when Hsi =>
+         when Hsi   =>
             return Hsi_Freq;
 
          when Hsi48 =>
@@ -50,7 +52,7 @@ package body STM32.RCC is
    procedure Enable_Clock (Source : Sys_Clock_Source) is
    begin
       case Source is
-         when Hsi =>
+         when Hsi   =>
             RCC_Periph.CR.HSION := True;
             while not RCC_Periph.CR.HSIRDY loop
                null;
@@ -62,7 +64,7 @@ package body STM32.RCC is
                null;
             end loop;
 
-         when Hse =>
+         when Hse   =>
             raise Program_Error;
       end case;
    end Enable_Clock;
@@ -84,7 +86,7 @@ package body STM32.RCC is
 
       if This.Sysclk = Src_Clock_Freq then
          Pllmul_Bits := 0;
-         --  Real_Sysclk := Src_Clock_Freq;
+      --  Real_Sysclk := Src_Clock_Freq;
 
       else
          --  User requests a freq that needs some config.
@@ -97,7 +99,7 @@ package body STM32.RCC is
 
       -- FIXME: enable USB clock selected
       case This.Usb_Source is
-         when PLL =>
+         when PLL   =>
             --  no pll support yet
             raise Program_Error;
 
@@ -111,11 +113,12 @@ package body STM32.RCC is
          raise Program_Error;
       end if;
 
-      if This.Use_Crs then
-         RCC_Periph.APB1ENR.CRSEN := True;
-         CRS_Periph.CR.AUTOTRIMEN := True;
-         CRS_Periph.CR.CEN := True;
-      end if;
+      -- Commented out GE
+      --  if This.Use_Crs then
+      --     RCC_Periph.APB1ENR.CRSEN := True;
+      --     CRS_Periph.CR.AUTOTRIMEN := True;
+      --     CRS_Periph.CR.CEN := True;
+      --  end if;
 
       --  write config
       Cfgr_To_Write.Sw := 16#02#; -- HSI48

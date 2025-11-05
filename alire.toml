@@ -9,11 +9,16 @@ licenses = "GPL-3.0-or-later AND BSD-3-Clause"
 tags = ["embedded", "stm32f0", "nostd", "drivers"]
 website = "https://github.com/dkm/stm32f0x2_hal-ada"
 
+executables = ["main.adb"]
+
 [[depends-on]]
 cortex_m = "~0.5"
 hal = "~0.3"
 usb_embedded = "~0.3"
 gnat_arm_elf = ">=12"
+
+[build-switches]
+"*".style_checks = "No"
 
 [configuration.variables]
 Use_Startup = {type = "Boolean", default = true}

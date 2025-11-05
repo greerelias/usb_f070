@@ -48,8 +48,8 @@ package body STM32.Device is
          return 2;
       elsif Port'Address = GPIOD_Base then
          return 3;
-      elsif Port'Address = GPIOE_Base then
-         return 4;
+      --  elsif Port'Address = GPIOE_Base then -- Commented Out 11/4/25. GPIOE is undefined
+      --     return 4;
       elsif Port'Address = GPIOF_Base then
          return 5;
       else
@@ -71,10 +71,10 @@ package body STM32.Device is
          RCC_Periph.AHBENR.IOPCEN := True;
       elsif This'Address = GPIOD_Base then
          RCC_Periph.AHBENR.IOPDEN := True;
-         --  There is an error in the SVD file where this BIT (21 in
-         --  RCC_AHBENR) is missing.
-         --  elsif This'Address = GPIOE_Base then
-         --    RCC_Periph.AHBENR.IOPEEN := True;
+      --  There is an error in the SVD file where this BIT (21 in
+      --  RCC_AHBENR) is missing.
+      --  elsif This'Address = GPIOE_Base then
+      --    RCC_Periph.AHBENR.IOPEEN := True;
       elsif This'Address = GPIOF_Base then
          RCC_Periph.AHBENR.IOPFEN := True;
       else
@@ -121,11 +121,11 @@ package body STM32.Device is
          RCC_Periph.AHBRSTR.IOPDRST := True;
          RCC_Periph.AHBRSTR.IOPDRST := False;
 
-         --  There is an error in the SVD file where this BIT (21 in RCC_AHBRSTR) is
-         --  missing.
-         --  elsif This'Address = GPIOE_Base then
-         --     RCC_Periph.AHBRSTR.IOPERST := True;
-         --     RCC_Periph.AHBRSTR.IOPERST := False;
+      --  There is an error in the SVD file where this BIT (21 in RCC_AHBRSTR) is
+      --  missing.
+      --  elsif This'Address = GPIOE_Base then
+      --     RCC_Periph.AHBRSTR.IOPERST := True;
+      --     RCC_Periph.AHBRSTR.IOPERST := False;
       elsif This'Address = GPIOF_Base then
          RCC_Periph.AHBRSTR.IOPFRST := True;
          RCC_Periph.AHBRSTR.IOPFRST := False;
@@ -274,8 +274,9 @@ package body STM32.Device is
    begin
       if This'Address = TIM1_Base then
          RCC_Periph.APB2ENR.TIM1EN := True;
-      elsif This'Address = TIM2_Base then
-         RCC_Periph.APB1ENR.TIM2EN := True;
+      -- Commented out GE
+      --  elsif This'Address = TIM2_Base then
+      --     RCC_Periph.APB1ENR.TIM2EN := True;
       elsif This'Address = TIM3_Base then
          RCC_Periph.APB1ENR.TIM3EN := True;
 
@@ -307,9 +308,10 @@ package body STM32.Device is
       if This'Address = TIM1_Base then
          RCC_Periph.APB2RSTR.TIM1RST := True;
          RCC_Periph.APB2RSTR.TIM1RST := False;
-      elsif This'Address = TIM2_Base then
-         RCC_Periph.APB1RSTR.TIM2RST := True;
-         RCC_Periph.APB1RSTR.TIM2RST := False;
+      -- Commented Out GE
+      --  elsif This'Address = TIM2_Base then
+      --     RCC_Periph.APB1RSTR.TIM2RST := True;
+      --     RCC_Periph.APB1RSTR.TIM2RST := False;
       elsif This'Address = TIM3_Base then
          RCC_Periph.APB1RSTR.TIM3RST := True;
          RCC_Periph.APB1RSTR.TIM3RST := False;

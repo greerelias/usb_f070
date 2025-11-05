@@ -127,11 +127,12 @@ package body STM32.EXTI is
      (Line : External_Line_Number) return Boolean is
    begin
       if Line <= EXTI_Line_17 then
-         return EXTI_Periph.PR.PIF.Arr (External_Line_Number'Pos (Line));
+         -- remove PIF GE
+         return EXTI_Periph.PR.PR.Arr (External_Line_Number'Pos (Line));
       elsif Line <= EXTI_Line_22 then
-         return EXTI_Periph.PR.PIF_1.Arr (External_Line_Number'Pos (Line));
+         return EXTI_Periph.PR.PR.Arr (External_Line_Number'Pos (Line));
       else
-         return EXTI_Periph.PR.PIF31;
+         return EXTI_Periph.PR.PR.Arr (31);
       end if;
    end External_Interrupt_Pending;
    ------------------------------
@@ -142,11 +143,12 @@ package body STM32.EXTI is
    begin
       --  yes, one to clear
       if Line <= EXTI_Line_17 then
-         EXTI_Periph.PR.PIF.Arr (External_Line_Number'Pos (Line)) := True;
+         -- remove PIF GE
+         EXTI_Periph.PR.PR.Arr (External_Line_Number'Pos (Line)) := True;
       elsif Line <= EXTI_Line_22 then
-         EXTI_Periph.PR.PIF_1.Arr (External_Line_Number'Pos (Line)) := True;
+         EXTI_Periph.PR.PR.Arr (External_Line_Number'Pos (Line)) := True;
       else
-         EXTI_Periph.PR.PIF31 := True;
+         EXTI_Periph.PR.PR.Arr (31) := True;
       end if;
 
    end Clear_External_Interrupt;

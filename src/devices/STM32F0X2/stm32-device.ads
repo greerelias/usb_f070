@@ -67,8 +67,8 @@ package STM32.Device is
    with Import, Volatile, Address => GPIOC_Base;
    GPIO_D : aliased GPIO_Port
    with Import, Volatile, Address => GPIOD_Base;
-   GPIO_E : aliased GPIO_Port
-   with Import, Volatile, Address => GPIOE_Base;
+   --  GPIO_E : aliased GPIO_Port
+   --  with Import, Volatile, Address => GPIOE_Base; -- Commented Out 11/4/25. GPIOE is undefined
    GPIO_F : aliased GPIO_Port
    with Import, Volatile, Address => GPIOF_Base;
 
@@ -136,22 +136,22 @@ package STM32.Device is
    PD13 : aliased GPIO_Point := (GPIO_D'Access, Pin_13);
    PD14 : aliased GPIO_Point := (GPIO_D'Access, Pin_14);
    PD15 : aliased GPIO_Point := (GPIO_D'Access, Pin_15);
-   PE0  : aliased GPIO_Point := (GPIO_E'Access, Pin_0);
-   PE1  : aliased GPIO_Point := (GPIO_E'Access, Pin_1);
-   PE2  : aliased GPIO_Point := (GPIO_E'Access, Pin_2);
-   PE3  : aliased GPIO_Point := (GPIO_E'Access, Pin_3);
-   PE4  : aliased GPIO_Point := (GPIO_E'Access, Pin_4);
-   PE5  : aliased GPIO_Point := (GPIO_E'Access, Pin_5);
-   PE6  : aliased GPIO_Point := (GPIO_E'Access, Pin_6);
-   PE7  : aliased GPIO_Point := (GPIO_E'Access, Pin_7);
-   PE8  : aliased GPIO_Point := (GPIO_E'Access, Pin_8);
-   PE9  : aliased GPIO_Point := (GPIO_E'Access, Pin_9);
-   PE10 : aliased GPIO_Point := (GPIO_E'Access, Pin_10);
-   PE11 : aliased GPIO_Point := (GPIO_E'Access, Pin_11);
-   PE12 : aliased GPIO_Point := (GPIO_E'Access, Pin_12);
-   PE13 : aliased GPIO_Point := (GPIO_E'Access, Pin_13);
-   PE14 : aliased GPIO_Point := (GPIO_E'Access, Pin_14);
-   PE15 : aliased GPIO_Point := (GPIO_E'Access, Pin_15);
+   --  PE0  : aliased GPIO_Point := (GPIO_E'Access, Pin_0); -- Commented 11/4/25. No GPIO_E
+   --  PE1  : aliased GPIO_Point := (GPIO_E'Access, Pin_1);
+   --  PE2  : aliased GPIO_Point := (GPIO_E'Access, Pin_2);
+   --  PE3  : aliased GPIO_Point := (GPIO_E'Access, Pin_3);
+   --  PE4  : aliased GPIO_Point := (GPIO_E'Access, Pin_4);
+   --  PE5  : aliased GPIO_Point := (GPIO_E'Access, Pin_5);
+   --  PE6  : aliased GPIO_Point := (GPIO_E'Access, Pin_6);
+   --  PE7  : aliased GPIO_Point := (GPIO_E'Access, Pin_7);
+   --  PE8  : aliased GPIO_Point := (GPIO_E'Access, Pin_8);
+   --  PE9  : aliased GPIO_Point := (GPIO_E'Access, Pin_9);
+   --  PE10 : aliased GPIO_Point := (GPIO_E'Access, Pin_10);
+   --  PE11 : aliased GPIO_Point := (GPIO_E'Access, Pin_11);
+   --  PE12 : aliased GPIO_Point := (GPIO_E'Access, Pin_12);
+   --  PE13 : aliased GPIO_Point := (GPIO_E'Access, Pin_13);
+   --  PE14 : aliased GPIO_Point := (GPIO_E'Access, Pin_14);
+   --  PE15 : aliased GPIO_Point := (GPIO_E'Access, Pin_15);
    PF0  : aliased GPIO_Point := (GPIO_F'Access, Pin_0);
    PF1  : aliased GPIO_Point := (GPIO_F'Access, Pin_1);
    PF2  : aliased GPIO_Point := (GPIO_F'Access, Pin_2);
@@ -248,8 +248,9 @@ package STM32.Device is
 
    Timer_1 : aliased Timer
    with Import, Volatile, Address => TIM1_Base;
-   Timer_2 : aliased Timer
-   with Import, Volatile, Address => TIM2_Base;
+   --  Commented Out GE
+   --  Timer_2 : aliased Timer
+   --  with Import, Volatile, Address => TIM2_Base;
    Timer_3 : aliased Timer
    with Import, Volatile, Address => TIM3_Base;
 

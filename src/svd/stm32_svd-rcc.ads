@@ -46,24 +46,27 @@ package STM32_SVD.RCC is
       --  unspecified
       Reserved_26_31 : HAL.UInt6 := 16#0#;
    end record
-     with Volatile_Full_Access, Object_Size => 32,
-          Bit_Order => System.Low_Order_First;
+   with
+     Volatile_Full_Access,
+     Object_Size => 32,
+     Bit_Order   => System.Low_Order_First;
 
-   for CR_Register use record
-      HSION          at 0 range 0 .. 0;
-      HSIRDY         at 0 range 1 .. 1;
-      Reserved_2_2   at 0 range 2 .. 2;
-      HSITRIM        at 0 range 3 .. 7;
-      HSICAL         at 0 range 8 .. 15;
-      HSEON          at 0 range 16 .. 16;
-      HSERDY         at 0 range 17 .. 17;
-      HSEBYP         at 0 range 18 .. 18;
-      CSSON          at 0 range 19 .. 19;
-      Reserved_20_23 at 0 range 20 .. 23;
-      PLLON          at 0 range 24 .. 24;
-      PLLRDY         at 0 range 25 .. 25;
-      Reserved_26_31 at 0 range 26 .. 31;
-   end record;
+   for CR_Register use
+     record
+       HSION at 0 range 0 .. 0;
+       HSIRDY at 0 range 1 .. 1;
+       Reserved_2_2 at 0 range 2 .. 2;
+       HSITRIM at 0 range 3 .. 7;
+       HSICAL at 0 range 8 .. 15;
+       HSEON at 0 range 16 .. 16;
+       HSERDY at 0 range 17 .. 17;
+       HSEBYP at 0 range 18 .. 18;
+       CSSON at 0 range 19 .. 19;
+       Reserved_20_23 at 0 range 20 .. 23;
+       PLLON at 0 range 24 .. 24;
+       PLLRDY at 0 range 25 .. 25;
+       Reserved_26_31 at 0 range 26 .. 31;
+     end record;
 
    subtype CFGR_SW_Field is HAL.UInt2;
    subtype CFGR_SWS_Field is HAL.UInt2;
@@ -105,25 +108,28 @@ package STM32_SVD.RCC is
       --  PLL clock not divided for MCO
       PLLNODIV       : Boolean := False;
    end record
-     with Volatile_Full_Access, Object_Size => 32,
-          Bit_Order => System.Low_Order_First;
+   with
+     Volatile_Full_Access,
+     Object_Size => 32,
+     Bit_Order   => System.Low_Order_First;
 
-   for CFGR_Register use record
-      SW             at 0 range 0 .. 1;
-      SWS            at 0 range 2 .. 3;
-      HPRE           at 0 range 4 .. 7;
-      PPRE           at 0 range 8 .. 10;
-      Reserved_11_13 at 0 range 11 .. 13;
-      ADCPRE         at 0 range 14 .. 14;
-      PLLSRC         at 0 range 15 .. 16;
-      PLLXTPRE       at 0 range 17 .. 17;
-      PLLMUL         at 0 range 18 .. 21;
-      Reserved_22_23 at 0 range 22 .. 23;
-      MCO            at 0 range 24 .. 26;
-      Reserved_27_27 at 0 range 27 .. 27;
-      MCOPRE         at 0 range 28 .. 30;
-      PLLNODIV       at 0 range 31 .. 31;
-   end record;
+   for CFGR_Register use
+     record
+       SW at 0 range 0 .. 1;
+       SWS at 0 range 2 .. 3;
+       HPRE at 0 range 4 .. 7;
+       PPRE at 0 range 8 .. 10;
+       Reserved_11_13 at 0 range 11 .. 13;
+       ADCPRE at 0 range 14 .. 14;
+       PLLSRC at 0 range 15 .. 16;
+       PLLXTPRE at 0 range 17 .. 17;
+       PLLMUL at 0 range 18 .. 21;
+       Reserved_22_23 at 0 range 22 .. 23;
+       MCO at 0 range 24 .. 26;
+       Reserved_27_27 at 0 range 27 .. 27;
+       MCOPRE at 0 range 28 .. 30;
+       PLLNODIV at 0 range 31 .. 31;
+     end record;
 
    --  Clock interrupt register (RCC_CIR)
    type CIR_Register is record
@@ -178,36 +184,39 @@ package STM32_SVD.RCC is
       --  unspecified
       Reserved_24_31 : HAL.UInt8 := 16#0#;
    end record
-     with Volatile_Full_Access, Object_Size => 32,
-          Bit_Order => System.Low_Order_First;
+   with
+     Volatile_Full_Access,
+     Object_Size => 32,
+     Bit_Order   => System.Low_Order_First;
 
-   for CIR_Register use record
-      LSIRDYF        at 0 range 0 .. 0;
-      LSERDYF        at 0 range 1 .. 1;
-      HSIRDYF        at 0 range 2 .. 2;
-      HSERDYF        at 0 range 3 .. 3;
-      PLLRDYF        at 0 range 4 .. 4;
-      HSI14RDYF      at 0 range 5 .. 5;
-      HSI48RDYF      at 0 range 6 .. 6;
-      CSSF           at 0 range 7 .. 7;
-      LSIRDYIE       at 0 range 8 .. 8;
-      LSERDYIE       at 0 range 9 .. 9;
-      HSIRDYIE       at 0 range 10 .. 10;
-      HSERDYIE       at 0 range 11 .. 11;
-      PLLRDYIE       at 0 range 12 .. 12;
-      HSI14RDYE      at 0 range 13 .. 13;
-      HSI48RDYIE     at 0 range 14 .. 14;
-      Reserved_15_15 at 0 range 15 .. 15;
-      LSIRDYC        at 0 range 16 .. 16;
-      LSERDYC        at 0 range 17 .. 17;
-      HSIRDYC        at 0 range 18 .. 18;
-      HSERDYC        at 0 range 19 .. 19;
-      PLLRDYC        at 0 range 20 .. 20;
-      HSI14RDYC      at 0 range 21 .. 21;
-      HSI48RDYC      at 0 range 22 .. 22;
-      CSSC           at 0 range 23 .. 23;
-      Reserved_24_31 at 0 range 24 .. 31;
-   end record;
+   for CIR_Register use
+     record
+       LSIRDYF at 0 range 0 .. 0;
+       LSERDYF at 0 range 1 .. 1;
+       HSIRDYF at 0 range 2 .. 2;
+       HSERDYF at 0 range 3 .. 3;
+       PLLRDYF at 0 range 4 .. 4;
+       HSI14RDYF at 0 range 5 .. 5;
+       HSI48RDYF at 0 range 6 .. 6;
+       CSSF at 0 range 7 .. 7;
+       LSIRDYIE at 0 range 8 .. 8;
+       LSERDYIE at 0 range 9 .. 9;
+       HSIRDYIE at 0 range 10 .. 10;
+       HSERDYIE at 0 range 11 .. 11;
+       PLLRDYIE at 0 range 12 .. 12;
+       HSI14RDYE at 0 range 13 .. 13;
+       HSI48RDYIE at 0 range 14 .. 14;
+       Reserved_15_15 at 0 range 15 .. 15;
+       LSIRDYC at 0 range 16 .. 16;
+       LSERDYC at 0 range 17 .. 17;
+       HSIRDYC at 0 range 18 .. 18;
+       HSERDYC at 0 range 19 .. 19;
+       PLLRDYC at 0 range 20 .. 20;
+       HSI14RDYC at 0 range 21 .. 21;
+       HSI48RDYC at 0 range 22 .. 22;
+       CSSC at 0 range 23 .. 23;
+       Reserved_24_31 at 0 range 24 .. 31;
+     end record;
 
    --  APB2 peripheral reset register (RCC_APB2RSTR)
    type APB2RSTR_Register is record
@@ -242,26 +251,29 @@ package STM32_SVD.RCC is
       --  unspecified
       Reserved_23_31 : HAL.UInt9 := 16#0#;
    end record
-     with Volatile_Full_Access, Object_Size => 32,
-          Bit_Order => System.Low_Order_First;
+   with
+     Volatile_Full_Access,
+     Object_Size => 32,
+     Bit_Order   => System.Low_Order_First;
 
-   for APB2RSTR_Register use record
-      SYSCFGRST      at 0 range 0 .. 0;
-      Reserved_1_8   at 0 range 1 .. 8;
-      ADCRST         at 0 range 9 .. 9;
-      Reserved_10_10 at 0 range 10 .. 10;
-      TIM1RST        at 0 range 11 .. 11;
-      SPI1RST        at 0 range 12 .. 12;
-      Reserved_13_13 at 0 range 13 .. 13;
-      USART1RST      at 0 range 14 .. 14;
-      Reserved_15_15 at 0 range 15 .. 15;
-      TIM15RST       at 0 range 16 .. 16;
-      TIM16RST       at 0 range 17 .. 17;
-      TIM17RST       at 0 range 18 .. 18;
-      Reserved_19_21 at 0 range 19 .. 21;
-      DBGMCURST      at 0 range 22 .. 22;
-      Reserved_23_31 at 0 range 23 .. 31;
-   end record;
+   for APB2RSTR_Register use
+     record
+       SYSCFGRST at 0 range 0 .. 0;
+       Reserved_1_8 at 0 range 1 .. 8;
+       ADCRST at 0 range 9 .. 9;
+       Reserved_10_10 at 0 range 10 .. 10;
+       TIM1RST at 0 range 11 .. 11;
+       SPI1RST at 0 range 12 .. 12;
+       Reserved_13_13 at 0 range 13 .. 13;
+       USART1RST at 0 range 14 .. 14;
+       Reserved_15_15 at 0 range 15 .. 15;
+       TIM15RST at 0 range 16 .. 16;
+       TIM16RST at 0 range 17 .. 17;
+       TIM17RST at 0 range 18 .. 18;
+       Reserved_19_21 at 0 range 19 .. 21;
+       DBGMCURST at 0 range 22 .. 22;
+       Reserved_23_31 at 0 range 23 .. 31;
+     end record;
 
    --  APB1 peripheral reset register (RCC_APB1RSTR)
    type APB1RSTR_Register is record
@@ -310,33 +322,36 @@ package STM32_SVD.RCC is
       --  unspecified
       Reserved_29_31 : HAL.UInt3 := 16#0#;
    end record
-     with Volatile_Full_Access, Object_Size => 32,
-          Bit_Order => System.Low_Order_First;
+   with
+     Volatile_Full_Access,
+     Object_Size => 32,
+     Bit_Order   => System.Low_Order_First;
 
-   for APB1RSTR_Register use record
-      Reserved_0_0   at 0 range 0 .. 0;
-      TIM3RST        at 0 range 1 .. 1;
-      Reserved_2_3   at 0 range 2 .. 3;
-      TIM6RST        at 0 range 4 .. 4;
-      TIM7RST        at 0 range 5 .. 5;
-      Reserved_6_7   at 0 range 6 .. 7;
-      TIM14RST       at 0 range 8 .. 8;
-      Reserved_9_10  at 0 range 9 .. 10;
-      WWDGRST        at 0 range 11 .. 11;
-      Reserved_12_13 at 0 range 12 .. 13;
-      SPI2RST        at 0 range 14 .. 14;
-      Reserved_15_16 at 0 range 15 .. 16;
-      USART2RST      at 0 range 17 .. 17;
-      USART3RST      at 0 range 18 .. 18;
-      USART4RST      at 0 range 19 .. 19;
-      USART5RST      at 0 range 20 .. 20;
-      I2C1RST        at 0 range 21 .. 21;
-      I2C2RST        at 0 range 22 .. 22;
-      USBRST         at 0 range 23 .. 23;
-      Reserved_24_27 at 0 range 24 .. 27;
-      PWRRST         at 0 range 28 .. 28;
-      Reserved_29_31 at 0 range 29 .. 31;
-   end record;
+   for APB1RSTR_Register use
+     record
+       Reserved_0_0 at 0 range 0 .. 0;
+       TIM3RST at 0 range 1 .. 1;
+       Reserved_2_3 at 0 range 2 .. 3;
+       TIM6RST at 0 range 4 .. 4;
+       TIM7RST at 0 range 5 .. 5;
+       Reserved_6_7 at 0 range 6 .. 7;
+       TIM14RST at 0 range 8 .. 8;
+       Reserved_9_10 at 0 range 9 .. 10;
+       WWDGRST at 0 range 11 .. 11;
+       Reserved_12_13 at 0 range 12 .. 13;
+       SPI2RST at 0 range 14 .. 14;
+       Reserved_15_16 at 0 range 15 .. 16;
+       USART2RST at 0 range 17 .. 17;
+       USART3RST at 0 range 18 .. 18;
+       USART4RST at 0 range 19 .. 19;
+       USART5RST at 0 range 20 .. 20;
+       I2C1RST at 0 range 21 .. 21;
+       I2C2RST at 0 range 22 .. 22;
+       USBRST at 0 range 23 .. 23;
+       Reserved_24_27 at 0 range 24 .. 27;
+       PWRRST at 0 range 28 .. 28;
+       Reserved_29_31 at 0 range 29 .. 31;
+     end record;
 
    --  AHB Peripheral Clock enable register (RCC_AHBENR)
    type AHBENR_Register is record
@@ -362,32 +377,38 @@ package STM32_SVD.RCC is
       IOPBEN         : Boolean := False;
       --  I/O port C clock enable
       IOPCEN         : Boolean := False;
+      --  I/O port D clock enable -- Commented 11/4/25. Added IODEnable for stm32-device.adb:72
+      IOPDEN         : Boolean := False; -- Missing from SVD??
       --  unspecified
-      Reserved_20_21 : HAL.UInt2 := 16#0#;
+      Reserved_21    : HAL.Bit := 16#0#;
       --  I/O port F clock enable
       IOPFEN         : Boolean := False;
       --  unspecified
       Reserved_23_31 : HAL.UInt9 := 16#0#;
    end record
-     with Volatile_Full_Access, Object_Size => 32,
-          Bit_Order => System.Low_Order_First;
+   with
+     Volatile_Full_Access,
+     Object_Size => 32,
+     Bit_Order   => System.Low_Order_First;
 
-   for AHBENR_Register use record
-      DMA1EN         at 0 range 0 .. 0;
-      Reserved_1_1   at 0 range 1 .. 1;
-      SRAMEN         at 0 range 2 .. 2;
-      Reserved_3_3   at 0 range 3 .. 3;
-      FLITFEN        at 0 range 4 .. 4;
-      Reserved_5_5   at 0 range 5 .. 5;
-      CRCEN          at 0 range 6 .. 6;
-      Reserved_7_16  at 0 range 7 .. 16;
-      IOPAEN         at 0 range 17 .. 17;
-      IOPBEN         at 0 range 18 .. 18;
-      IOPCEN         at 0 range 19 .. 19;
-      Reserved_20_21 at 0 range 20 .. 21;
-      IOPFEN         at 0 range 22 .. 22;
-      Reserved_23_31 at 0 range 23 .. 31;
-   end record;
+   for AHBENR_Register use
+     record
+       DMA1EN at 0 range 0 .. 0;
+       Reserved_1_1 at 0 range 1 .. 1;
+       SRAMEN at 0 range 2 .. 2;
+       Reserved_3_3 at 0 range 3 .. 3;
+       FLITFEN at 0 range 4 .. 4;
+       Reserved_5_5 at 0 range 5 .. 5;
+       CRCEN at 0 range 6 .. 6;
+       Reserved_7_16 at 0 range 7 .. 16;
+       IOPAEN at 0 range 17 .. 17;
+       IOPBEN at 0 range 18 .. 18;
+       IOPCEN at 0 range 19 .. 19;
+       IOPDEN at 0 range 20 .. 20;
+       Reserved_21 at 0 range 21 .. 21;
+       IOPFEN at 0 range 22 .. 22;
+       Reserved_23_31 at 0 range 23 .. 31;
+     end record;
 
    --  APB2 peripheral clock enable register (RCC_APB2ENR)
    type APB2ENR_Register is record
@@ -422,26 +443,29 @@ package STM32_SVD.RCC is
       --  unspecified
       Reserved_23_31 : HAL.UInt9 := 16#0#;
    end record
-     with Volatile_Full_Access, Object_Size => 32,
-          Bit_Order => System.Low_Order_First;
+   with
+     Volatile_Full_Access,
+     Object_Size => 32,
+     Bit_Order   => System.Low_Order_First;
 
-   for APB2ENR_Register use record
-      SYSCFGEN       at 0 range 0 .. 0;
-      Reserved_1_8   at 0 range 1 .. 8;
-      ADCEN          at 0 range 9 .. 9;
-      Reserved_10_10 at 0 range 10 .. 10;
-      TIM1EN         at 0 range 11 .. 11;
-      SPI1EN         at 0 range 12 .. 12;
-      Reserved_13_13 at 0 range 13 .. 13;
-      USART1EN       at 0 range 14 .. 14;
-      Reserved_15_15 at 0 range 15 .. 15;
-      TIM15EN        at 0 range 16 .. 16;
-      TIM16EN        at 0 range 17 .. 17;
-      TIM17EN        at 0 range 18 .. 18;
-      Reserved_19_21 at 0 range 19 .. 21;
-      DBGMCUEN       at 0 range 22 .. 22;
-      Reserved_23_31 at 0 range 23 .. 31;
-   end record;
+   for APB2ENR_Register use
+     record
+       SYSCFGEN at 0 range 0 .. 0;
+       Reserved_1_8 at 0 range 1 .. 8;
+       ADCEN at 0 range 9 .. 9;
+       Reserved_10_10 at 0 range 10 .. 10;
+       TIM1EN at 0 range 11 .. 11;
+       SPI1EN at 0 range 12 .. 12;
+       Reserved_13_13 at 0 range 13 .. 13;
+       USART1EN at 0 range 14 .. 14;
+       Reserved_15_15 at 0 range 15 .. 15;
+       TIM15EN at 0 range 16 .. 16;
+       TIM16EN at 0 range 17 .. 17;
+       TIM17EN at 0 range 18 .. 18;
+       Reserved_19_21 at 0 range 19 .. 21;
+       DBGMCUEN at 0 range 22 .. 22;
+       Reserved_23_31 at 0 range 23 .. 31;
+     end record;
 
    --  APB1 peripheral clock enable register (RCC_APB1ENR)
    type APB1ENR_Register is record
@@ -490,33 +514,36 @@ package STM32_SVD.RCC is
       --  unspecified
       Reserved_29_31 : HAL.UInt3 := 16#0#;
    end record
-     with Volatile_Full_Access, Object_Size => 32,
-          Bit_Order => System.Low_Order_First;
+   with
+     Volatile_Full_Access,
+     Object_Size => 32,
+     Bit_Order   => System.Low_Order_First;
 
-   for APB1ENR_Register use record
-      Reserved_0_0   at 0 range 0 .. 0;
-      TIM3EN         at 0 range 1 .. 1;
-      Reserved_2_3   at 0 range 2 .. 3;
-      TIM6EN         at 0 range 4 .. 4;
-      TIM7EN         at 0 range 5 .. 5;
-      Reserved_6_7   at 0 range 6 .. 7;
-      TIM14EN        at 0 range 8 .. 8;
-      Reserved_9_10  at 0 range 9 .. 10;
-      WWDGEN         at 0 range 11 .. 11;
-      Reserved_12_13 at 0 range 12 .. 13;
-      SPI2EN         at 0 range 14 .. 14;
-      Reserved_15_16 at 0 range 15 .. 16;
-      USART2EN       at 0 range 17 .. 17;
-      USART3EN       at 0 range 18 .. 18;
-      USART4EN       at 0 range 19 .. 19;
-      USART5EN       at 0 range 20 .. 20;
-      I2C1EN         at 0 range 21 .. 21;
-      I2C2EN         at 0 range 22 .. 22;
-      USBRST         at 0 range 23 .. 23;
-      Reserved_24_27 at 0 range 24 .. 27;
-      PWREN          at 0 range 28 .. 28;
-      Reserved_29_31 at 0 range 29 .. 31;
-   end record;
+   for APB1ENR_Register use
+     record
+       Reserved_0_0 at 0 range 0 .. 0;
+       TIM3EN at 0 range 1 .. 1;
+       Reserved_2_3 at 0 range 2 .. 3;
+       TIM6EN at 0 range 4 .. 4;
+       TIM7EN at 0 range 5 .. 5;
+       Reserved_6_7 at 0 range 6 .. 7;
+       TIM14EN at 0 range 8 .. 8;
+       Reserved_9_10 at 0 range 9 .. 10;
+       WWDGEN at 0 range 11 .. 11;
+       Reserved_12_13 at 0 range 12 .. 13;
+       SPI2EN at 0 range 14 .. 14;
+       Reserved_15_16 at 0 range 15 .. 16;
+       USART2EN at 0 range 17 .. 17;
+       USART3EN at 0 range 18 .. 18;
+       USART4EN at 0 range 19 .. 19;
+       USART5EN at 0 range 20 .. 20;
+       I2C1EN at 0 range 21 .. 21;
+       I2C2EN at 0 range 22 .. 22;
+       USBRST at 0 range 23 .. 23;
+       Reserved_24_27 at 0 range 24 .. 27;
+       PWREN at 0 range 28 .. 28;
+       Reserved_29_31 at 0 range 29 .. 31;
+     end record;
 
    subtype BDCR_LSEDRV_Field is HAL.UInt2;
    subtype BDCR_RTCSEL_Field is HAL.UInt2;
@@ -544,21 +571,24 @@ package STM32_SVD.RCC is
       --  unspecified
       Reserved_17_31 : HAL.UInt15 := 16#0#;
    end record
-     with Volatile_Full_Access, Object_Size => 32,
-          Bit_Order => System.Low_Order_First;
+   with
+     Volatile_Full_Access,
+     Object_Size => 32,
+     Bit_Order   => System.Low_Order_First;
 
-   for BDCR_Register use record
-      LSEON          at 0 range 0 .. 0;
-      LSERDY         at 0 range 1 .. 1;
-      LSEBYP         at 0 range 2 .. 2;
-      LSEDRV         at 0 range 3 .. 4;
-      Reserved_5_7   at 0 range 5 .. 7;
-      RTCSEL         at 0 range 8 .. 9;
-      Reserved_10_14 at 0 range 10 .. 14;
-      RTCEN          at 0 range 15 .. 15;
-      BDRST          at 0 range 16 .. 16;
-      Reserved_17_31 at 0 range 17 .. 31;
-   end record;
+   for BDCR_Register use
+     record
+       LSEON at 0 range 0 .. 0;
+       LSERDY at 0 range 1 .. 1;
+       LSEBYP at 0 range 2 .. 2;
+       LSEDRV at 0 range 3 .. 4;
+       Reserved_5_7 at 0 range 5 .. 7;
+       RTCSEL at 0 range 8 .. 9;
+       Reserved_10_14 at 0 range 10 .. 14;
+       RTCEN at 0 range 15 .. 15;
+       BDRST at 0 range 16 .. 16;
+       Reserved_17_31 at 0 range 17 .. 31;
+     end record;
 
    --  Control/status register (RCC_CSR)
    type CSR_Register is record
@@ -585,22 +615,25 @@ package STM32_SVD.RCC is
       --  Low-power reset flag
       LPWRRSTF      : Boolean := False;
    end record
-     with Volatile_Full_Access, Object_Size => 32,
-          Bit_Order => System.Low_Order_First;
+   with
+     Volatile_Full_Access,
+     Object_Size => 32,
+     Bit_Order   => System.Low_Order_First;
 
-   for CSR_Register use record
-      LSION         at 0 range 0 .. 0;
-      LSIRDY        at 0 range 1 .. 1;
-      Reserved_2_23 at 0 range 2 .. 23;
-      RMVF          at 0 range 24 .. 24;
-      OBLRSTF       at 0 range 25 .. 25;
-      PINRSTF       at 0 range 26 .. 26;
-      PORRSTF       at 0 range 27 .. 27;
-      SFTRSTF       at 0 range 28 .. 28;
-      IWDGRSTF      at 0 range 29 .. 29;
-      WWDGRSTF      at 0 range 30 .. 30;
-      LPWRRSTF      at 0 range 31 .. 31;
-   end record;
+   for CSR_Register use
+     record
+       LSION at 0 range 0 .. 0;
+       LSIRDY at 0 range 1 .. 1;
+       Reserved_2_23 at 0 range 2 .. 23;
+       RMVF at 0 range 24 .. 24;
+       OBLRSTF at 0 range 25 .. 25;
+       PINRSTF at 0 range 26 .. 26;
+       PORRSTF at 0 range 27 .. 27;
+       SFTRSTF at 0 range 28 .. 28;
+       IWDGRSTF at 0 range 29 .. 29;
+       WWDGRSTF at 0 range 30 .. 30;
+       LPWRRSTF at 0 range 31 .. 31;
+     end record;
 
    --  AHB peripheral reset register
    type AHBRSTR_Register is record
@@ -621,19 +654,22 @@ package STM32_SVD.RCC is
       --  unspecified
       Reserved_23_31 : HAL.UInt9 := 16#0#;
    end record
-     with Volatile_Full_Access, Object_Size => 32,
-          Bit_Order => System.Low_Order_First;
+   with
+     Volatile_Full_Access,
+     Object_Size => 32,
+     Bit_Order   => System.Low_Order_First;
 
-   for AHBRSTR_Register use record
-      Reserved_0_16  at 0 range 0 .. 16;
-      IOPARST        at 0 range 17 .. 17;
-      IOPBRST        at 0 range 18 .. 18;
-      IOPCRST        at 0 range 19 .. 19;
-      IOPDRST        at 0 range 20 .. 20;
-      Reserved_21_21 at 0 range 21 .. 21;
-      IOPFRST        at 0 range 22 .. 22;
-      Reserved_23_31 at 0 range 23 .. 31;
-   end record;
+   for AHBRSTR_Register use
+     record
+       Reserved_0_16 at 0 range 0 .. 16;
+       IOPARST at 0 range 17 .. 17;
+       IOPBRST at 0 range 18 .. 18;
+       IOPCRST at 0 range 19 .. 19;
+       IOPDRST at 0 range 20 .. 20;
+       Reserved_21_21 at 0 range 21 .. 21;
+       IOPFRST at 0 range 22 .. 22;
+       Reserved_23_31 at 0 range 23 .. 31;
+     end record;
 
    subtype CFGR2_PREDIV_Field is HAL.UInt4;
 
@@ -644,13 +680,16 @@ package STM32_SVD.RCC is
       --  unspecified
       Reserved_4_31 : HAL.UInt28 := 16#0#;
    end record
-     with Volatile_Full_Access, Object_Size => 32,
-          Bit_Order => System.Low_Order_First;
+   with
+     Volatile_Full_Access,
+     Object_Size => 32,
+     Bit_Order   => System.Low_Order_First;
 
-   for CFGR2_Register use record
-      PREDIV        at 0 range 0 .. 3;
-      Reserved_4_31 at 0 range 4 .. 31;
-   end record;
+   for CFGR2_Register use
+     record
+       PREDIV at 0 range 0 .. 3;
+       Reserved_4_31 at 0 range 4 .. 31;
+     end record;
 
    subtype CFGR3_USART1SW_Field is HAL.UInt2;
    subtype CFGR3_USART2SW_Field is HAL.UInt2;
@@ -678,21 +717,24 @@ package STM32_SVD.RCC is
       --  unspecified
       Reserved_18_31 : HAL.UInt14 := 16#0#;
    end record
-     with Volatile_Full_Access, Object_Size => 32,
-          Bit_Order => System.Low_Order_First;
+   with
+     Volatile_Full_Access,
+     Object_Size => 32,
+     Bit_Order   => System.Low_Order_First;
 
-   for CFGR3_Register use record
-      USART1SW       at 0 range 0 .. 1;
-      Reserved_2_3   at 0 range 2 .. 3;
-      I2C1SW         at 0 range 4 .. 4;
-      Reserved_5_5   at 0 range 5 .. 5;
-      CECSW          at 0 range 6 .. 6;
-      USBSW          at 0 range 7 .. 7;
-      ADCSW          at 0 range 8 .. 8;
-      Reserved_9_15  at 0 range 9 .. 15;
-      USART2SW       at 0 range 16 .. 17;
-      Reserved_18_31 at 0 range 18 .. 31;
-   end record;
+   for CFGR3_Register use
+     record
+       USART1SW at 0 range 0 .. 1;
+       Reserved_2_3 at 0 range 2 .. 3;
+       I2C1SW at 0 range 4 .. 4;
+       Reserved_5_5 at 0 range 5 .. 5;
+       CECSW at 0 range 6 .. 6;
+       USBSW at 0 range 7 .. 7;
+       ADCSW at 0 range 8 .. 8;
+       Reserved_9_15 at 0 range 9 .. 15;
+       USART2SW at 0 range 16 .. 17;
+       Reserved_18_31 at 0 range 18 .. 31;
+     end record;
 
    subtype CR2_HSI14TRIM_Field is HAL.UInt5;
    subtype CR2_HSI14CAL_Field is HAL.UInt8;
@@ -720,21 +762,24 @@ package STM32_SVD.RCC is
       --  unspecified
       Reserved_25_31 : HAL.UInt7 := 16#0#;
    end record
-     with Volatile_Full_Access, Object_Size => 32,
-          Bit_Order => System.Low_Order_First;
+   with
+     Volatile_Full_Access,
+     Object_Size => 32,
+     Bit_Order   => System.Low_Order_First;
 
-   for CR2_Register use record
-      HSI14ON        at 0 range 0 .. 0;
-      HSI14RDY       at 0 range 1 .. 1;
-      HSI14DIS       at 0 range 2 .. 2;
-      HSI14TRIM      at 0 range 3 .. 7;
-      HSI14CAL       at 0 range 8 .. 15;
-      HSI48ON        at 0 range 16 .. 16;
-      HSI48RDY       at 0 range 17 .. 17;
-      Reserved_18_23 at 0 range 18 .. 23;
-      HSI48CAL       at 0 range 24 .. 24;
-      Reserved_25_31 at 0 range 25 .. 31;
-   end record;
+   for CR2_Register use
+     record
+       HSI14ON at 0 range 0 .. 0;
+       HSI14RDY at 0 range 1 .. 1;
+       HSI14DIS at 0 range 2 .. 2;
+       HSI14TRIM at 0 range 3 .. 7;
+       HSI14CAL at 0 range 8 .. 15;
+       HSI48ON at 0 range 16 .. 16;
+       HSI48RDY at 0 range 17 .. 17;
+       Reserved_18_23 at 0 range 18 .. 23;
+       HSI48CAL at 0 range 24 .. 24;
+       Reserved_25_31 at 0 range 25 .. 31;
+     end record;
 
    -----------------
    -- Peripherals --
@@ -771,27 +816,28 @@ package STM32_SVD.RCC is
       --  Clock control register 2
       CR2      : aliased CR2_Register;
    end record
-     with Volatile;
+   with Volatile;
 
-   for RCC_Peripheral use record
-      CR       at 16#0# range 0 .. 31;
-      CFGR     at 16#4# range 0 .. 31;
-      CIR      at 16#8# range 0 .. 31;
-      APB2RSTR at 16#C# range 0 .. 31;
-      APB1RSTR at 16#10# range 0 .. 31;
-      AHBENR   at 16#14# range 0 .. 31;
-      APB2ENR  at 16#18# range 0 .. 31;
-      APB1ENR  at 16#1C# range 0 .. 31;
-      BDCR     at 16#20# range 0 .. 31;
-      CSR      at 16#24# range 0 .. 31;
-      AHBRSTR  at 16#28# range 0 .. 31;
-      CFGR2    at 16#2C# range 0 .. 31;
-      CFGR3    at 16#30# range 0 .. 31;
-      CR2      at 16#34# range 0 .. 31;
-   end record;
+   for RCC_Peripheral use
+     record
+       CR at 16#0# range 0 .. 31;
+       CFGR at 16#4# range 0 .. 31;
+       CIR at 16#8# range 0 .. 31;
+       APB2RSTR at 16#C# range 0 .. 31;
+       APB1RSTR at 16#10# range 0 .. 31;
+       AHBENR at 16#14# range 0 .. 31;
+       APB2ENR at 16#18# range 0 .. 31;
+       APB1ENR at 16#1C# range 0 .. 31;
+       BDCR at 16#20# range 0 .. 31;
+       CSR at 16#24# range 0 .. 31;
+       AHBRSTR at 16#28# range 0 .. 31;
+       CFGR2 at 16#2C# range 0 .. 31;
+       CFGR3 at 16#30# range 0 .. 31;
+       CR2 at 16#34# range 0 .. 31;
+     end record;
 
    --  Reset and clock control
    RCC_Periph : aliased RCC_Peripheral
-     with Import, Address => RCC_Base;
+   with Import, Address => RCC_Base;
 
 end STM32_SVD.RCC;

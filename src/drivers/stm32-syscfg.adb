@@ -80,17 +80,19 @@ package body STM32.SYSCFG is
       --  that is, the values 0 .. n-1, which we get automatically unless
       --  overridden.
       case Pin is
-         when 0 .. 3 =>
-            SYSCFG_COMP_Periph.SYSCFG_EXTICR1.EXTI.Arr (Pin) := Port_Id;
+         -- changed from SYSCFG_COMP_Periph GE
 
-         when 4 .. 7 =>
-            SYSCFG_COMP_Periph.SYSCFG_EXTICR2.EXTI.Arr (Pin) := Port_Id;
+         when 0 .. 3   =>
+            SYSCFG_Periph.EXTICR1.EXTI.Arr (Pin) := Port_Id;
 
-         when 8 .. 11 =>
-            SYSCFG_COMP_Periph.SYSCFG_EXTICR3.EXTI.Arr (Pin) := Port_Id;
+         when 4 .. 7   =>
+            SYSCFG_Periph.EXTICR2.EXTI.Arr (Pin) := Port_Id;
+
+         when 8 .. 11  =>
+            SYSCFG_Periph.EXTICR3.EXTI.Arr (Pin) := Port_Id;
 
          when 12 .. 15 =>
-            SYSCFG_COMP_Periph.SYSCFG_EXTICR4.EXTI.Arr (Pin) := Port_Id;
+            SYSCFG_Periph.EXTICR4.EXTI.Arr (Pin) := Port_Id;
       end case;
    end Connect_External_Interrupt;
 
