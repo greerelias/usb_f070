@@ -30,20 +30,20 @@ project Stm32f0x2_Hal is
    -- type Build_Kind is ("debug", "optimize");
    -- Build_Mode : Build_Kind := External ("STM32F0X2_HAL_BUILD_MODE", "optimize");
 
-   Startup_Dirs := ();
-   Linker_Script := "";
-   Linker_Switches := ();
-   case Stm32f0x2_Hal_Config.Use_Startup is
-      when "True" =>
-         for Languages use ("Ada", "Asm_Cpp");
-         Startup_Dirs := ("src/startup");
+   -- Startup_Dirs := ();
+   -- Linker_Script := "";
+   -- Linker_Switches := ();
+   -- case Stm32f0x2_Hal_Config.Use_Startup is
+   --    when "True" =>
+   for Languages use ("Ada", "Asm_Cpp");
+   Startup_Dirs := ("src/startup");
 
-         Linker_Switches := ("-T", Project'Project_dir & "/src/startup/link.ld",
-                                   "-Wl,--print-memory-usage",
-                                   "-Wl,--gc-sections");
+   Linker_Switches := ("-T", Project'Project_dir & "/src/startup/link.ld",
+                              "-Wl,--print-memory-usage",
+                              "-Wl,--gc-sections");
 
-      when others => null;
-   end case;
+   --    when others => null;
+   -- end case;
 
    for Source_Dirs use         
        Startup_Dirs &          

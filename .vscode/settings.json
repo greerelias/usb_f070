@@ -1,3 +1,4 @@
 {
-    "ada.projectFile": "stm32f0x2_hal.gpr"
+    "ada.projectFile": "stm32f0x2_hal.gpr",
+    "sarif-viewer.connectToGithubCodeScanning": "off"
 }

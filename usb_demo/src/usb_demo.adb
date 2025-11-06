@@ -1,15 +1,18 @@
 --  with USB.Device.Serial; use USB.Device.Serial;
 --  with STM32.USB_Device;  use STM32.USB_Device;
-with STM32.RCC; use STM32.RCC;
 pragma Extensions_Allowed (On);
+with STM32.RCC; use STM32.RCC;
 
-procedure Main is
+procedure Usb_Demo is
 begin
-   rcc_cfg : Rcc_Cfgr(
-      Hclk => 
-   );
-
+   Enable_Clock (SCS_HSE);
+   Set_PLL_Source (PLL_HSE);
+   Set_PLL_Divider (1);
+   Set_PLL_Multiplier (6);
+   Enable_Clock (SCS_PLL);
    --  Stack : USB.Device.USB_Device_Stack (Max_Classes => 1);
    --  UDC : aliased STM32.USB_Device.UDC;
-   null;
-end Main;
+   loop
+      null;
+   end loop;
+end Usb_Demo;
